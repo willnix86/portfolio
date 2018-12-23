@@ -1,6 +1,4 @@
-$PRIMARY: #034078;
-$SECONDARY: #001F54;
-$ACCENT: #1282A2;
+@import 'variables';
 
 #work {
 
@@ -34,6 +32,7 @@ $ACCENT: #1282A2;
 
 .work__title {
     font-weight: bold;
+    color: $PRIMARY;
 }
 
 .work__description {
@@ -46,6 +45,12 @@ $ACCENT: #1282A2;
         color: $PRIMARY;
         &:hover {
             color: $ACCENT;
+            span {
+                display: none;
+            }
+            &:before {
+                content: 'GitHub Repo'
+            }
         }
     }
     ul {
@@ -71,4 +76,10 @@ $ACCENT: #1282A2;
     &:hover {
         background-color: $PRIMARY;
     } 
+}
+
+@include respond-above(xs) {
+    .work__title {
+        font-size: calc(16px + 2vw);
+    }
 }

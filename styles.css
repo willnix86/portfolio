@@ -20,7 +20,6 @@ nav {
   list-style: none;
   padding: 0;
   margin: 0;
-  justify-self: flex-end;
 }
 
 .nav__logo {
@@ -44,6 +43,12 @@ nav {
   margin: 0 auto;
 }
 
+#work div, .footer__wrapper, #about, header, .nav__wrapper {
+  display: flex;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
 header {
   height: auto;
   text-align: center;
@@ -58,8 +63,27 @@ header {
 .header__tagline {
   color: #034078;
   margin: 30px 0;
+  font-size: calc(16px + 5vw);
 }
 
+@media (min-width: 519px) {
+  .header__image {
+    margin: 30px auto 0 auto;
+    width: 40%;
+    max-width: 298px;
+    border-radius: 50%;
+    content: url("images/WillNixon-circle.jpg");
+  }
+
+  .header__tagline {
+    font-size: calc(16px + 4vw);
+  }
+}
+@media (min-width: 640px) {
+  .header__tagline {
+    font-size: calc(16px + 3vw);
+  }
+}
 #work div, .footer__wrapper, #about, .nav__wrapper, header {
   display: flex;
   max-width: 1300px;
@@ -77,30 +101,143 @@ header {
   padding: 0 20px;
 }
 
+@media (min-width: 519px) {
+  #about {
+    margin-bottom: 20px;
+  }
+
+  .about__text {
+    margin: 10px auto 20px auto;
+    max-width: 900px;
+  }
+}
 .english-rules__img-mobile-portrait {
   height: 350px;
   z-index: 1;
   position: relative;
   left: 20px;
   top: 20px;
+  transition: transform 0.1s ease-in-out;
   box-shadow: 10px 10px 10px #0b2346;
+}
+.english-rules__img-mobile-portrait:hover {
+  z-index: 5;
+  transform: scale(1.03);
+  box-shadow: 20px 20px 20px rgba(11, 35, 70, 0.63);
 }
 
 .english-rules__img-mobile-landscape {
   position: relative;
+  z-index: 2;
   top: 360px;
-  left: -80px;
+  left: -90px;
   height: 115px;
+  transition: transform 0.1s ease-in-out;
   box-shadow: 10px 5px 10px #0b2346;
+}
+.english-rules__img-mobile-landscape:hover {
+  z-index: 5;
+  transform: scale(1.03);
+  box-shadow: 20px 20px 20px rgba(11, 35, 70, 0.63);
 }
 
 .english-rules__img-mobile-code {
   z-index: 0;
   position: relative;
   top: 90px;
-  left: -220px;
+  left: -255px;
   height: 110px;
+  transition: transform 0.1s ease-in-out;
   box-shadow: 10px 5px 10px #0b2346;
+}
+.english-rules__img-mobile-code:hover {
+  z-index: 5;
+  transform: scale(1.03);
+  box-shadow: 20px 20px 20px rgba(11, 35, 70, 0.63);
+}
+
+.english-rules__img-landscape {
+  display: none;
+}
+
+@media (min-width: 519px) {
+  .english-rules__img-mobile-code, .english-rules__img-mobile-landscape {
+    display: none;
+  }
+
+  .english-rules__img-landscape {
+    display: block;
+    width: 500px;
+    height: 300px;
+    position: relative;
+    z-index: 0;
+    top: 20px;
+    left: -200px;
+    transition: transform 0.1s ease-in-out;
+    box-shadow: 10px 5px 10px #0b2346;
+  }
+  .english-rules__img-landscape:hover {
+    z-index: 5;
+    transform: scale(1.03);
+    box-shadow: 20px 20px 20px rgba(11, 35, 70, 0.63);
+  }
+
+  .english-rules__img-mobile-portrait {
+    height: 350px;
+    left: 270px;
+    top: 120px;
+    z-index: 1;
+  }
+  .english-rules__img-mobile-portrait:hover {
+    z-index: 5;
+    transform: scale(1.03);
+    box-shadow: 20px 20px 20px rgba(11, 35, 70, 0.63);
+  }
+}
+@media (min-width: 519px) and (min-width: 640px) {
+  .english-rules__img-landscape {
+    width: 600px;
+    height: 400px;
+    left: -180px;
+  }
+
+  .english-rules__img-mobile-portrait {
+    height: 330px;
+    top: 140px;
+    left: 390px;
+  }
+}
+@media (min-width: 519px) and (min-width: 768px) {
+  .english-rules__img-landscape {
+    left: -130px;
+  }
+
+  .english-rules__img-mobile-portrait {
+    left: 435px;
+  }
+}
+@media (min-width: 519px) and (min-width: 870px) {
+  .english-rules__img-landscape {
+    left: 0px;
+  }
+
+  .english-rules__img-mobile-portrait {
+    left: 505px;
+  }
+}
+@media (min-width: 519px) and (min-width: 1198px) {
+  .english-rules__img-landscape {
+    left: 100px;
+  }
+
+  .english-rules__img-mobile-portrait {
+    left: 665px;
+  }
+}
+#work div, .footer__wrapper, .nav__wrapper, header, #about {
+  display: flex;
+  max-width: 1300px;
+  margin: 0 auto;
 }
 
 #work div, .footer__wrapper, .nav__wrapper, header, #about {
@@ -133,6 +270,12 @@ footer {
   text-align: right;
 }
 
+#work div, .nav__wrapper, header, #about, .footer__wrapper {
+  display: flex;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
 #work div {
   text-align: center;
 }
@@ -160,10 +303,7 @@ footer {
 
 .work__title {
   font-weight: bold;
-}
-.work__title:after {
-  content: "";
-  border-bottom: 2px solid blue;
+  color: #034078;
 }
 
 .work__description {
@@ -176,6 +316,12 @@ footer {
 }
 .work__tools a:hover {
   color: #1282A2;
+}
+.work__tools a:hover span {
+  display: none;
+}
+.work__tools a:hover:before {
+  content: "GitHub Repo";
 }
 .work__tools ul {
   list-style: none;
@@ -201,13 +347,24 @@ footer {
   background-color: #034078;
 }
 
+@media (min-width: 519px) {
+  .work__title {
+    font-size: calc(16px + 2vw);
+  }
+}
 .ppl__img-mobile-portrait {
   height: 350px;
   z-index: 1;
   position: relative;
   left: -150px;
   top: 130px;
+  transition: transform 0.1s ease-in-out;
   box-shadow: 10px 10px 10px rgba(0, 3, 8, 0.377);
+}
+.ppl__img-mobile-portrait:hover {
+  z-index: 5;
+  transform: scale(1.03);
+  box-shadow: 20px 20px 20px rgba(0, 3, 8, 0.26);
 }
 
 .ppl__img-mobile-landscape {
@@ -216,25 +373,56 @@ footer {
   top: 20px;
   left: 20px;
   height: 171px;
+  transition: transform 0.1s ease-in-out;
   box-shadow: 10px 10px 10px rgba(0, 3, 8, 0.377);
+}
+.ppl__img-mobile-landscape:hover {
+  z-index: 5;
+  transform: scale(1.03);
+  box-shadow: 20px 20px 20px rgba(0, 3, 8, 0.26);
 }
 
 .ppl__img-mobile-code {
   z-index: 0;
   position: relative;
   top: 300px;
-  left: -460px;
+  left: -450px;
   height: 110px;
+  transition: transform 0.1s ease-in-out;
   box-shadow: 10px 10px 10px rgba(0, 3, 8, 0.377);
 }
+.ppl__img-mobile-code:hover {
+  z-index: 5;
+  transform: scale(1.03);
+  box-shadow: 20px 20px 20px rgba(0, 3, 8, 0.26);
+}
 
+.ppl__img {
+  display: none;
+}
+
+@media (min-width: 519px) {
+  .ppl__img-mobile-portrait, .ppl__img-mobile-code, .ppl__img-mobile-landscape {
+    display: none;
+  }
+
+  .ppl__img {
+    display: block;
+  }
+}
 .beerings__img-mobile-portrait {
   height: 300px;
   z-index: 1;
   position: relative;
   left: -250px;
   top: 170px;
+  transition: transform 0.1s ease-in-out;
   box-shadow: 10px 10px 10px rgba(0, 3, 8, 0.377);
+}
+.beerings__img-mobile-portrait:hover {
+  z-index: 5;
+  transform: scale(1.03);
+  box-shadow: 20px 20px 20px rgba(0, 3, 8, 0.26);
 }
 
 .beerings__img-mobile-landscape {
@@ -243,7 +431,14 @@ footer {
   top: 30px;
   left: 80px;
   height: 150px;
+  transition: transform 0.1s ease-in-out;
   box-shadow: 10px 10px 10px rgba(0, 3, 8, 0.377);
+}
+.beerings__img-mobile-landscape:hover {
+  z-index: 5;
+  transform: scale(1.03);
+  transition: transform 0.1s ease-in-out;
+  box-shadow: 20px 20px 20px rgba(0, 3, 8, 0.26);
 }
 
 .beerings__img-mobile-code {
@@ -252,9 +447,28 @@ footer {
   top: 230px;
   left: -220px;
   height: 175px;
+  transition: transform 0.1s ease-in-out;
   box-shadow: 10px 10px 10px rgba(0, 3, 8, 0.377);
 }
+.beerings__img-mobile-code:hover {
+  z-index: 5;
+  transform: scale(1.03);
+  box-shadow: 20px 20px 20px rgba(0, 3, 8, 0.26);
+}
 
+.beerings__img {
+  display: none;
+}
+
+@media (min-width: 519px) {
+  .beerings__img-mobile-portrait, .beerings__img-mobile-code, .beerings__img-mobile-landscape {
+    display: none;
+  }
+
+  .english-rules__img {
+    display: block;
+  }
+}
 .nav__wrapper, header, #about, .footer__wrapper, #work div {
   display: flex;
   max-width: 1300px;
@@ -263,8 +477,19 @@ footer {
 
 body {
   font: 16px "Assistant", sans-serif;
+  line-height: 1.5;
   color: #0A1128;
   background-color: #FEFCFB;
+}
+
+b {
+  color: #034078;
+}
+
+@media (min-width: 519px) {
+  p {
+    font-size: calc(10px + 1vw);
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

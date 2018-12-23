@@ -1,4 +1,4 @@
-$PRIMARY: #034078;
+@import 'variables';
 
 %flex-container {
     display: flex;
@@ -21,4 +21,27 @@ header {
 .header__tagline {
     color: $PRIMARY;
     margin: 30px 0;
+    font-size: calc(16px + 5vw);
+}
+
+@include respond-above(xs) {
+
+    .header__image {
+        margin: 30px auto 0 auto;
+        width: 40%;
+        max-width: 298px;
+        border-radius: 50%;
+        content:url('images/WillNixon-circle.jpg');
+    }
+
+    .header__tagline {
+        font-size: calc(16px + 4vw);
+    }
+
+}
+
+@include respond-above(sm) {
+    .header__tagline {
+        font-size: calc(16px + 3vw);
+    }
 }

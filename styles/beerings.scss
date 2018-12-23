@@ -4,7 +4,14 @@
     position: relative;
     left: -250px;
     top: 170px;
+    transition: transform 0.1s ease-in-out;
     box-shadow: 10px 10px 10px rgba(0, 3, 8, 0.377);
+
+    &:hover {
+        z-index: 5;
+        transform: scale(1.03);
+        box-shadow: 20px 20px 20px rgba(0, 3, 8, 0.26);
+    }
 }
 
 .beerings__img-mobile-landscape {
@@ -13,7 +20,15 @@
     top: 30px;
     left: 80px;
     height: 150px;
+    transition: transform 0.1s ease-in-out;
     box-shadow: 10px 10px 10px rgba(0, 3, 8, 0.377);
+
+    &:hover {
+        z-index: 5;
+        transform: scale(1.03);
+        transition: transform 0.1s ease-in-out;
+        box-shadow: 20px 20px 20px rgba(0, 3, 8, 0.26);
+    }
 }
 
 .beerings__img-mobile-code {
@@ -22,5 +37,26 @@
     top: 230px;
     left: -220px;
     height: 175px;
+    transition: transform 0.1s ease-in-out;
     box-shadow: 10px 10px 10px rgba(0, 3, 8, 0.377);
+
+    &:hover {
+        z-index: 5;
+        transform: scale(1.03);
+        box-shadow: 20px 20px 20px rgba(0, 3, 8, 0.26);
+    }
+}
+
+.beerings__img {
+    display: none;
+}
+
+@include respond-above(xs) {
+    .beerings__img-mobile-portrait, .beerings__img-mobile-code, .beerings__img-mobile-landscape  {
+        display: none;
+    }
+
+    .english-rules__img {
+        display: block;
+    }
 }

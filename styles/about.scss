@@ -1,8 +1,4 @@
-%flex-container {
-    display: flex;
-    max-width: 1300px;
-    margin: 0 auto;
-}
+@import 'variables';
 
 #about {
     @extend %flex-container;
@@ -14,4 +10,17 @@
 .about__text {
     margin: 5px 0 15px 0;
     padding: 0 20px;
+}
+
+@include respond-above(xs) {
+
+    #about {
+        margin-bottom: 20px;
+    }
+
+    .about__text {
+        margin: 10px auto 20px auto;
+        max-width: 900px;
+    }
+
 }

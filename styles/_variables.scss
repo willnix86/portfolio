@@ -1,0 +1,31 @@
+$FONT: 'Assistant', sans-serif;
+$FONT-SIZE: 16px;
+$WHITE: #FEFCFB;
+$BLACK: #0A1128;
+$PRIMARY: #034078;
+$SECONDARY: #001F54;
+$ACCENT: #1282A2;
+
+%flex-container {
+    display: flex;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+$breakpoints: (
+    xs: 519px,
+    sm: 640px,
+    md: 768px,
+    lg: 870px,
+    xl: 1198px
+);
+
+@mixin respond-above($breakpoint) {
+
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
+
+    @media (min-width: $breakpoint-value) {
+        @content;
+    }
+    
+}
