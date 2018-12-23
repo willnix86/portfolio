@@ -1,4 +1,6 @@
+$PRIMARY: #034078;
 $SECONDARY: #001F54;
+$ACCENT: #1282A2;
 
 #work {
 
@@ -25,6 +27,9 @@ $SECONDARY: #001F54;
     &:nth-child(3) {
         background-color: $SECONDARY;
     };
+    &:nth-child(5) {
+        background-color: $ACCENT;
+    };
 }
 
 .work__title {
@@ -42,13 +47,6 @@ $SECONDARY: #001F54;
         &:hover {
             color: $ACCENT;
         }
-        // &:before {
-        //     background: url(images/GitHub.png);
-        //     content: url('http://i.stack.imgur.com/Icd9n.png');
-        //     width:21px;
-        //     height:21px;
-        //     margin-right: 5px;
-        // }
     }
     ul {
         list-style: none;

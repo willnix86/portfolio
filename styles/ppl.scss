@@ -1,0 +1,26 @@
+.ppl__img-mobile-portrait {
+    height: 350px;
+    z-index: 1;
+    position: relative;
+    left: -150px;
+    top: 130px;
+    box-shadow: 10px 10px 10px rgba(0, 3, 8, 0.377);
+}
+
+.ppl__img-mobile-landscape {
+    z-index: 2;
+    position: relative;
+    top: 20px;
+    left: 20px;
+    height: 171px;
+    box-shadow: 10px 10px 10px rgba(0, 3, 8, 0.377);
+}
+
+.ppl__img-mobile-code {
+    z-index: 0;
+    position: relative;
+    top: 300px;
+    left: -460px;
+    height: 110px;
+    box-shadow: 10px 10px 10px rgba(0, 3, 8, 0.377);
+}

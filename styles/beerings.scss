@@ -1,0 +1,26 @@
+.beerings__img-mobile-portrait {
+    height: 300px;
+    z-index: 1;
+    position: relative;
+    left: -250px;
+    top: 170px;
+    box-shadow: 10px 10px 10px rgba(0, 3, 8, 0.377);
+}
+
+.beerings__img-mobile-landscape {
+    z-index: 1;
+    position: relative;
+    top: 30px;
+    left: 80px;
+    height: 150px;
+    box-shadow: 10px 10px 10px rgba(0, 3, 8, 0.377);
+}
+
+.beerings__img-mobile-code {
+    z-index: 0;
+    position: relative;
+    top: 230px;
+    left: -220px;
+    height: 175px;
+    box-shadow: 10px 10px 10px rgba(0, 3, 8, 0.377);
+}
