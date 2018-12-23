@@ -1,0 +1,34 @@
+$WHITE: #FEFCFB;
+
+%flex-container {
+    display: flex;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+footer {
+    background-color: $PRIMARY;
+    height: 200px;
+    color: $WHITE;
+    min-height: 70px;
+}
+
+.footer__wrapper {
+    @extend %flex-container;
+    justify-content: space-between;
+    padding: 10px 30px;
+    max-width: 900px;
+
+    a {
+        text-decoration: underline;
+        font-weight: 100;
+        color: $WHITE;
+        display: block;
+        margin-bottom: 3px;
+    }
+
+}
+
+.footer__social {
+    text-align: right;
+}

@@ -1,0 +1,76 @@
+$SECONDARY: #001F54;
+
+#work {
+
+    div {
+        @extend %flex-container;
+        &:nth-child(2n) {
+            flex-direction: column;
+        };
+        text-align: center;
+    }
+
+}
+
+.work__text {
+    text-align: center;
+}
+
+.work__images {
+    height: 500px;
+    width: 100%;
+    &:nth-child(1) {
+        background-color: $PRIMARY;
+    };
+    &:nth-child(3) {
+        background-color: $SECONDARY;
+    };
+}
+
+.work__title {
+    font-weight: bold;
+}
+
+.work__description {
+    margin: 5px 0 20px 0;
+    padding: 0 20px;
+}
+
+.work__tools {
+    a {
+        color: $PRIMARY;
+        &:hover {
+            color: $ACCENT;
+        }
+        // &:before {
+        //     background: url(images/GitHub.png);
+        //     content: url('http://i.stack.imgur.com/Icd9n.png');
+        //     width:21px;
+        //     height:21px;
+        //     margin-right: 5px;
+        // }
+    }
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        &:nth-child(1) {
+            margin-right: 30px;
+        }
+    }
+}
+
+.work__button {
+    font-size: calc(13px + 1vmin);
+    margin: 30px auto;
+    max-height: 100px;
+    width: 70px;
+    padding: 10px 35px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: $SECONDARY;
+    &:hover {
+        background-color: $PRIMARY;
+    } 
+}

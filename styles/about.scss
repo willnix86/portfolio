@@ -1,0 +1,17 @@
+%flex-container {
+    display: flex;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+#about {
+    @extend %flex-container;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 30px !important;
+}
+
+.about__text {
+    margin: 5px 0 15px 0;
+    padding: 0 20px;
+}

@@ -1,0 +1,44 @@
+$PRIMARY: #034078;
+$ACCENT: #1282A2;
+
+%flex-container {
+    display: flex;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+nav {
+    min-height: 70px;
+    border-bottom: 1px rgba(0, 31, 84, 0.144) solid;
+}
+
+.nav__wrapper {
+    @extend %flex-container;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        justify-self: flex-end;
+    }
+}
+
+.nav__logo {
+    justify-self: flex-start;
+    width: auto;
+    height: 50px;
+}
+
+.nav__link {
+    padding: 6px 12px;
+    text-decoration: none;
+    color: $PRIMARY;
+    &:hover {
+        color: $ACCENT;
+    }
+}

@@ -1,0 +1,24 @@
+$PRIMARY: #034078;
+
+%flex-container {
+    display: flex;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+header {
+    @extend %flex-container;
+    height: auto;
+    text-align: center;
+    flex-direction: column;
+    margin-bottom: 0;
+}
+
+.header__image {
+    width: 100%;
+}
+
+.header__tagline {
+    color: $PRIMARY;
+    margin: 30px 0;
+}

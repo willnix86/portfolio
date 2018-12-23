@@ -1,0 +1,27 @@
+@import 'styles/navigation';
+@import 'styles/header';
+@import 'styles/about';
+@import 'styles/englishrules';
+@import 'styles/footer';
+@import 'styles/work';
+
+$FONT: 'Assistant', sans-serif;
+$FONT-SIZE: 16px;
+$WHITE: #FEFCFB;
+$BLACK: #0A1128;
+$PRIMARY: #034078;
+$SECONDARY: #001F54;
+$ACCENT: #1282A2;
+
+
+%flex-container {
+    display: flex;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+body {
+    font: $FONT-SIZE $FONT;
+    color: $BLACK;
+    background-color: $WHITE;
+}
