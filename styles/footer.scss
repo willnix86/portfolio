@@ -20,15 +20,62 @@ footer {
     max-width: 900px;
 
     a {
-        text-decoration: underline;
+        text-decoration: none;
         font-weight: 100;
         color: $WHITE;
         display: block;
-        margin-bottom: 3px;
+        margin-bottom: 10px;
+        padding: 0;
+        &:before {
+            display: inline-block;
+            margin-right: 7px;
+            background-size: 16px 14px;
+            width: 16px; 
+            height: 14px;
+            content:"";
+        }
     }
 
 }
 
+.footer__title {
+    text-decoration: underline;
+}
+
 .footer__social {
-    text-align: right;
+    width: 150px;
+}
+
+.footer__contactinfo {
+    width: 170px;
+}
+
+.email {
+    &:before {
+        background-image: url('images/mail.png');
+    }
+}
+
+.twitter {
+    &:before {
+        background-image: url('images/twitter.png');
+    }
+}
+
+.instagram {
+    &:before {
+        background-image: url('images/instagram.png');
+    }
+}
+
+.linkedin {
+    &:before {
+        background-image: url('images/linkedin.png');
+    }
+}
+
+.github {
+    &:before {
+        background-image: url('images/github.png');
+    }
 }
