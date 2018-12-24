@@ -157,7 +157,7 @@ header {
   box-shadow: 20px 20px 20px rgba(11, 35, 70, 0.63);
 }
 
-.english-rules__img-landscape {
+.english-rules__img-landscape, .english-rules__img-code {
   display: none;
 }
 
@@ -210,9 +210,28 @@ header {
     top: 140px;
     left: 390px;
     top: 130px;
-    z-index: 1;
+    z-index: 2;
+    border-radius: 3px;
   }
   .english-rules__img-mobile-portrait:hover {
+    z-index: 5;
+    transform: scale(1.03);
+    box-shadow: 20px 20px 20px rgba(11, 35, 70, 0.63);
+  }
+
+  .english-rules__img-code {
+    display: block;
+    position: relative;
+    z-index: 1;
+    width: 400px;
+    height: 200px;
+    left: -750px;
+    top: 270px;
+    border-radius: 3px;
+    transition: transform 0.1s ease-in-out;
+    box-shadow: 10px 5px 10px #0b2346;
+  }
+  .english-rules__img-code:hover {
     z-index: 5;
     transform: scale(1.03);
     box-shadow: 20px 20px 20px rgba(11, 35, 70, 0.63);
@@ -227,6 +246,10 @@ header {
   .english-rules__img-mobile-portrait {
     left: 515px;
   }
+
+  .english-rules__img-code {
+    left: -820px;
+  }
 }
 @media (min-width: 1024px) {
   .english-rules__img-landscape {
@@ -236,6 +259,10 @@ header {
   .english-rules__img-mobile-portrait {
     left: 665px;
   }
+
+  .english-rules__img-code {
+    left: -650px;
+  }
 }
 @media (min-width: 1300px) {
   .english-rules__img-landscape {
@@ -244,6 +271,10 @@ header {
 
   .english-rules__img-mobile-portrait {
     left: 775px;
+  }
+
+  .english-rules__img-code {
+    left: -550px;
   }
 }
 #work div, .footer__wrapper, .nav__wrapper, header, #about {
@@ -345,6 +376,9 @@ footer {
 .work__tools ul:nth-child(1) {
   margin-right: 30px;
 }
+.work__tools ul li {
+  width: 100px;
+}
 
 .work__button {
   font-size: calc(13px + 1vmin);
@@ -411,7 +445,7 @@ footer {
   box-shadow: 20px 20px 20px rgba(0, 3, 8, 0.26);
 }
 
-.ppl__img-landscape {
+.ppl__img-landscape, .ppl__img-code {
   display: none;
 }
 
@@ -467,10 +501,29 @@ footer {
     height: 330px;
     top: 140px;
     left: 50px;
-    z-index: 1;
+    z-index: 2;
+    border-radius: 3px;
     border: 1px solid rgba(128, 164, 216, 0.377);
   }
   .ppl__img-mobile-portrait:hover {
+    z-index: 5;
+    transform: scale(1.03);
+    box-shadow: 20px 20px 20px rgba(11, 35, 70, 0.63);
+  }
+
+  .ppl__img-code {
+    display: block;
+    position: relative;
+    z-index: 1;
+    width: 400px;
+    height: 200px;
+    left: -600px;
+    top: 270px;
+    border-radius: 3px;
+    transition: transform 0.1s ease-in-out;
+    box-shadow: 10px 5px 10px #0b2346;
+  }
+  .ppl__img-code:hover {
     z-index: 5;
     transform: scale(1.03);
     box-shadow: 20px 20px 20px rgba(11, 35, 70, 0.63);
@@ -485,6 +538,10 @@ footer {
   .ppl__img-mobile-portrait {
     left: 65px;
   }
+
+  .ppl__img-code {
+    left: -590px;
+  }
 }
 @media (min-width: 1024px) {
   .ppl__img-landscape {
@@ -493,6 +550,10 @@ footer {
 
   .ppl__img-mobile-portrait {
     left: 225px;
+  }
+
+  .ppl__img-code {
+    left: -440px;
   }
 }
 @media (min-width: 1300px) {
@@ -503,6 +564,10 @@ footer {
 
   .ppl__img-mobile-portrait {
     left: 305px;
+  }
+
+  .ppl__img-code {
+    left: -350px;
   }
 }
 .beerings__img-mobile-portrait {
@@ -551,7 +616,7 @@ footer {
   box-shadow: 20px 20px 20px rgba(0, 3, 8, 0.26);
 }
 
-.beerings__img-landscape {
+.beerings__img-landscape, .beerings__img-code {
   display: none;
 }
 
@@ -602,10 +667,29 @@ footer {
   .beerings__img-mobile-portrait {
     height: 330px;
     top: 140px;
-    left: 400px;
-    z-index: 1;
+    left: 405px;
+    border-radius: 3px;
+    z-index: 2;
   }
   .beerings__img-mobile-portrait:hover {
+    z-index: 5;
+    transform: scale(1.03);
+    box-shadow: 20px 20px 20px rgba(11, 35, 70, 0.63);
+  }
+
+  .beerings__img-code {
+    display: block;
+    position: relative;
+    z-index: 1;
+    width: 400px;
+    height: 200px;
+    left: -750px;
+    top: 250px;
+    border-radius: 3px;
+    transition: transform 0.1s ease-in-out;
+    box-shadow: 10px 5px 10px #0b2346;
+  }
+  .beerings__img-code:hover {
     z-index: 5;
     transform: scale(1.03);
     box-shadow: 20px 20px 20px rgba(11, 35, 70, 0.63);
@@ -620,6 +704,11 @@ footer {
   .beerings__img-mobile-portrait {
     left: 515px;
   }
+
+  .beerings__img-code {
+    left: -800px;
+    top: 255px;
+  }
 }
 @media (min-width: 1024px) {
   .beerings__img-landscape {
@@ -629,6 +718,10 @@ footer {
   .beerings__img-mobile-portrait {
     left: 665px;
   }
+
+  .beerings__img-code {
+    left: -660px;
+  }
 }
 @media (min-width: 1300px) {
   .beerings__img-landscape {
@@ -637,6 +730,10 @@ footer {
 
   .beerings__img-mobile-portrait {
     left: 775px;
+  }
+
+  .beerings__img-code {
+    left: -550px;
   }
 }
 .nav__wrapper, header, #about, .footer__wrapper, #work div {
