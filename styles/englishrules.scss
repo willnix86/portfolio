@@ -51,6 +51,17 @@
     display: none;
 }
 
+@include respond-below(350px) {
+    .english-rules__img-mobile-code {
+        left: -295px;
+    }
+
+    .english-rules__img-mobile-landscape {
+        left: -110px;
+    }
+
+}
+
 @include respond-above(xs) {
 
     .english-rules__img-mobile-landscape {
@@ -95,7 +106,7 @@
         height: 330px;
         top: 140px;
         left: 390px;
-        top: 120px;
+        top: 130px;
         z-index: 1;
     
         &:hover {

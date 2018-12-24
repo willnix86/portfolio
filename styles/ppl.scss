@@ -52,10 +52,22 @@
     display: none;
 }
 
+@include respond-below(350px) {
+    .ppl__img-mobile-code {
+        left: -480px;
+    }
+
+    .ppl__img-mobile-landscape {
+        left: 10px;
+    }
+
+    .ppl__img-mobile-portrait {
+        left: -200px;
+    }
+}
+
+
 @include respond-above(xs) {
-    // .ppl__img-mobile-code, .ppl__img-mobile-landscape, .ppl__img-mobile-portrait  {
-    //     display: none;
-    // }
 
     .ppl__img-mobile-landscape {
         left: 40px;

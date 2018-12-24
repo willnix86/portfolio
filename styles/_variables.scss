@@ -29,3 +29,11 @@ $breakpoints: (
     }
     
 }
+
+@mixin respond-below($breakpoint) {
+    
+    @media (max-width: ($breakpoint - 1)) {
+        @content;
+    }
+
+}

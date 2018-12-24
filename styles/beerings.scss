@@ -51,6 +51,17 @@
     display: none;
 }
 
+@include respond-below(350px) {
+    .beerings__img-mobile-code {
+        left: -250px;
+    }
+
+    .beerings__img-mobile-landscape {
+        left: 40px;
+    }
+
+}
+
 @include respond-above(xs) {
 
     .beerings__img-mobile-landscape {
