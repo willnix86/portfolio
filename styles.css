@@ -1,4 +1,4 @@
-#work div, .footer__wrapper, #about, header, .nav__wrapper {
+#work div, .footer__wrapper, .about, header, .nav__wrapper {
   display: flex;
   max-width: 1350px;
   margin: 0 auto;
@@ -37,13 +37,13 @@ nav {
   color: #1282A2;
 }
 
-#work div, .footer__wrapper, #about, header, .nav__wrapper {
+#work div, .footer__wrapper, .about, header, .nav__wrapper {
   display: flex;
   max-width: 1350px;
   margin: 0 auto;
 }
 
-#work div, .footer__wrapper, #about, header, .nav__wrapper {
+#work div, .footer__wrapper, .about, header, .nav__wrapper {
   display: flex;
   max-width: 1300px;
   margin: 0 auto;
@@ -85,13 +85,13 @@ header {
     font-size: calc(16px + 3vw);
   }
 }
-#work div, .footer__wrapper, #about, .nav__wrapper, header {
+#work div, .footer__wrapper, .about, .nav__wrapper, header {
   display: flex;
   max-width: 1350px;
   margin: 0 auto;
 }
 
-#about {
+.about {
   flex-direction: column;
   text-align: center;
   margin-bottom: 30px !important;
@@ -277,13 +277,13 @@ header {
     left: -550px;
   }
 }
-#work div, .footer__wrapper, .nav__wrapper, header, #about {
+#work div, .footer__wrapper, .nav__wrapper, header, .about {
   display: flex;
   max-width: 1350px;
   margin: 0 auto;
 }
 
-#work div, .footer__wrapper, .nav__wrapper, header, #about {
+#work div, .footer__wrapper, .nav__wrapper, header, .about {
   display: flex;
   max-width: 1300px;
   margin: 0 auto;
@@ -350,7 +350,7 @@ footer {
   background-image: url("images/github.png");
 }
 
-#work div, .nav__wrapper, header, #about, .footer__wrapper {
+#work div, .nav__wrapper, header, .about, .footer__wrapper {
   display: flex;
   max-width: 1350px;
   margin: 0 auto;
@@ -773,7 +773,7 @@ footer {
     left: -550px;
   }
 }
-.nav__wrapper, header, #about, .footer__wrapper, #work div {
+.nav__wrapper, header, .about, .footer__wrapper, #work div {
   display: flex;
   max-width: 1350px;
   margin: 0 auto;

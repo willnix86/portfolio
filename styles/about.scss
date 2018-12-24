@@ -1,6 +1,6 @@
 @import 'variables';
 
-#about {
+.about {
     @extend %flex-container;
     flex-direction: column;
     text-align: center;
