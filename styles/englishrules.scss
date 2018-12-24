@@ -52,18 +52,35 @@
 }
 
 @include respond-above(xs) {
+
+    .english-rules__img-mobile-landscape {
+        left: -50px;
+    } 
+
+    .english-rules__img-mobile-code {
+        left: -215px;
+    }
+
+    .english-rules__img-mobile-portrait {
+        left: 30px;
+    }
+
+}
+
+@include respond-above(sm) {
+
     .english-rules__img-mobile-code, .english-rules__img-mobile-landscape  {
         display: none;
     }
 
     .english-rules__img-landscape {
         display: block;
-        width: 500px;
-        height: 300px;
         position: relative;
         z-index: 0;
+        width: 600px;
+        height: 400px;
+        left: -180px;
         top: 20px;
-        left: -200px;
         transition: transform 0.1s ease-in-out;
         box-shadow: 10px 5px 10px rgb(11, 35, 70);
 
@@ -72,11 +89,12 @@
             transform: scale(1.03);
             box-shadow: 20px 20px 20px rgba(11, 35, 70, 0.63);
         }
-    } 
-    
+    }
+
     .english-rules__img-mobile-portrait {
-        height: 350px;
-        left: 270px;
+        height: 330px;
+        top: 140px;
+        left: 390px;
         top: 120px;
         z-index: 1;
     
@@ -86,46 +104,32 @@
             box-shadow: 20px 20px 20px rgba(11, 35, 70, 0.63);
         }
     }
+}
 
-    @include respond-above(sm) {
-        .english-rules__img-landscape {
-            width: 600px;
-            height: 400px;
-            left: -180px
-        }
-
-        .english-rules__img-mobile-portrait {
-            height: 330px;
-            top: 140px;
-            left: 390px;
-        }
+@include respond-above(md) {
+    .english-rules__img-landscape {
+        left: -160px;
+        width: 700px;
     }
-
-    @include respond-above(md) {
-        .english-rules__img-landscape {
-            left: -130px;
-        }
-        .english-rules__img-mobile-portrait {
-            left: 435px;
-        }
+    .english-rules__img-mobile-portrait {
+        left: 515px;
     }
+}
 
-    @include respond-above(lg) {
-        .english-rules__img-landscape {
-            left: 0px;
-        }
-        .english-rules__img-mobile-portrait {
-            left: 505px;
-        }
+@include respond-above(lg) {
+    .english-rules__img-landscape {
+        left: 0px;
     }
-
-    @include respond-above(xl) {
-        .english-rules__img-landscape {
-            left: 100px;
-        }
-        .english-rules__img-mobile-portrait {
-            left: 665px;
-        }
+    .english-rules__img-mobile-portrait {
+        left: 665px;
     }
+}
 
+@include respond-above(xl) {
+    .english-rules__img-landscape {
+        left: 100px;
+    }
+    .english-rules__img-mobile-portrait {
+        left: 775px;
+    }
 }
