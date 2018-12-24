@@ -1,6 +1,6 @@
 #work div, .footer__wrapper, #about, header, .nav__wrapper {
   display: flex;
-  max-width: 1300px;
+  max-width: 1350px;
   margin: 0 auto;
 }
 
@@ -39,7 +39,7 @@ nav {
 
 #work div, .footer__wrapper, #about, header, .nav__wrapper {
   display: flex;
-  max-width: 1300px;
+  max-width: 1350px;
   margin: 0 auto;
 }
 
@@ -76,6 +76,7 @@ header {
   }
 
   .header__tagline {
+    font-family: "Roboto", sans-serif;
     font-size: calc(16px + 4vw);
   }
 }
@@ -86,7 +87,7 @@ header {
 }
 #work div, .footer__wrapper, #about, .nav__wrapper, header {
   display: flex;
-  max-width: 1300px;
+  max-width: 1350px;
   margin: 0 auto;
 }
 
@@ -238,7 +239,7 @@ header {
 }
 #work div, .footer__wrapper, .nav__wrapper, header, #about {
   display: flex;
-  max-width: 1300px;
+  max-width: 1350px;
   margin: 0 auto;
 }
 
@@ -274,7 +275,7 @@ footer {
 
 #work div, .nav__wrapper, header, #about, .footer__wrapper {
   display: flex;
-  max-width: 1300px;
+  max-width: 1350px;
   margin: 0 auto;
 }
 
@@ -306,6 +307,7 @@ footer {
 .work__title {
   font-weight: bold;
   color: #034078;
+  font-family: "Roboto", sans-serif;
 }
 
 .work__description {
@@ -608,7 +610,7 @@ footer {
 }
 .nav__wrapper, header, #about, .footer__wrapper, #work div {
   display: flex;
-  max-width: 1300px;
+  max-width: 1350px;
   margin: 0 auto;
 }
 
