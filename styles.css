@@ -304,7 +304,7 @@ footer {
 .footer__wrapper a {
   text-decoration: none;
   font-weight: 100;
-  color: #FEFCFB;
+  color: #e0dcda;
   display: block;
   margin-bottom: 10px;
   padding: 0;
@@ -317,9 +317,12 @@ footer {
   height: 14px;
   content: "";
 }
+.footer__wrapper a:hover {
+  color: #FEFCFB;
+}
 
 .footer__title {
-  text-decoration: underline;
+  font-weight: bold;
 }
 
 .footer__social {

@@ -22,7 +22,7 @@ footer {
     a {
         text-decoration: none;
         font-weight: 100;
-        color: $WHITE;
+        color: rgb(224, 220, 218);
         display: block;
         margin-bottom: 10px;
         padding: 0;
@@ -34,12 +34,15 @@ footer {
             height: 14px;
             content:"";
         }
+        &:hover {
+            color: $WHITE;
+        }
     }
 
 }
 
 .footer__title {
-    text-decoration: underline;
+    font-weight: bold;
 }
 
 .footer__social {
