@@ -20,13 +20,13 @@
     height: 500px;
     width: 100%;
     &:nth-child(1) {
-        background-color: $PRIMARY;
+        background-color: $ACCENT;
     };
     &:nth-child(3) {
         background-color: $SECONDARY;
     };
     &:nth-child(5) {
-        background-color: $ACCENT;
+        background-color: $PRIMARY;
     };
 }
 

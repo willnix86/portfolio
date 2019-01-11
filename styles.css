@@ -371,6 +371,7 @@ footer {
 }
 
 .work__images {
+  display: flex;
   height: 500px;
   width: 100%;
 }
@@ -441,6 +442,7 @@ footer {
   }
 }
 .ppl__img-mobile-portrait {
+  margin: 0 auto;
   height: 350px;
   z-index: 1;
   position: relative;
@@ -456,6 +458,7 @@ footer {
 }
 
 .ppl__img-mobile-landscape {
+  margin: 0 auto;
   z-index: 2;
   position: relative;
   top: 20px;
@@ -471,6 +474,7 @@ footer {
 }
 
 .ppl__img-mobile-code {
+  margin: 0 auto;
   z-index: 0;
   position: relative;
   top: 300px;
