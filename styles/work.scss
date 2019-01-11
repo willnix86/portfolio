@@ -3,8 +3,10 @@
 #work {
 
     div {
-        @extend %flex-container;
+        display: flex;
+        margin: 0 auto;
         &:nth-child(2n) {
+            max-width: 1350px;
             flex-direction: column;
         };
         text-align: center;
@@ -17,7 +19,7 @@
 }
 
 .work__images {
-    height: 500px;
+    min-height: 500px;
     width: 100%;
     &:nth-child(1) {
         background-color: $ACCENT;
@@ -28,6 +30,15 @@
     &:nth-child(5) {
         background-color: $PRIMARY;
     };
+}
+
+.work__images-wrapper {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    width: 90%;
+    min-height: 500px;
+    margin: 0 auto;
 }
 
 .work__title {
@@ -88,5 +99,21 @@
 @include respond-above(xs) {
     .work__title {
         font-size: calc(16px + 2vw);
+    }
+
+    .work__images-wrapper {
+        max-width: 550px;
+    }
+}
+
+@include respond-above(sm) {
+    .work__images-wrapper {
+        max-width: 600px;
+    }
+}
+
+@include respond-above(md) {
+    .work__images-wrapper {
+        max-width: 800px;
     }
 }
