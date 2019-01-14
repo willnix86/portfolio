@@ -25,6 +25,7 @@
     top: 35%; 
     transition: transform 0.1s ease-in-out;
     box-shadow: 10px 10px 10px rgba(0, 3, 8, 0.377);
+    border: 2px solid rgba(138, 164, 172, 0.473);
 
     &:hover {
         z-index: 5;
