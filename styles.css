@@ -338,19 +338,23 @@ footer {
 .work__tools a {
   color: #034078;
 }
+.work__tools a:before {
+  background-image: url("images/github-blue.png");
+  background-size: 15px 15px;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  content: "";
+  margin-right: 5px;
+}
 .work__tools a:hover {
   color: #1282A2;
-}
-.work__tools a:hover span {
-  display: none;
-}
-.work__tools a:hover:before {
-  content: "GitHub Repo";
 }
 .work__tools ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  text-align: left;
 }
 .work__tools ul:nth-child(1) {
   margin-right: 30px;
