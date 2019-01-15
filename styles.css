@@ -361,7 +361,8 @@ footer {
 }
 .work__tools ul li {
   font-size: calc(9px + 1vw);
-  width: 100px;
+  min-width: 100px;
+  text-align: center;
 }
 
 .work__button {
