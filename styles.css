@@ -356,6 +356,7 @@ footer {
   margin-right: 30px;
 }
 .work__tools ul li {
+  font-size: calc(9px + 1vw);
   width: 100px;
 }
 
@@ -419,7 +420,7 @@ footer {
   top: 35%;
   transition: transform 0.1s ease-in-out;
   box-shadow: 10px 10px 10px rgba(0, 3, 8, 0.377);
-  border: 2px solid rgba(138, 164, 172, 0.473);
+  border: 2px solid rgba(150, 187, 194, 0.473);
 }
 .ppl__img-portrait:hover {
   z-index: 5;
