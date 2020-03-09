@@ -1,16 +1,20 @@
 <script>
-
+  import Header from "./components/header.svelte";
+  let mode = "light";
+  // import Portfolio from "./components/header.svelte";
 </script>
 
 <style>
   main {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 60px 0 0 0;
     text-align: center;
+    font-family: "Roboto", sans-serif;
   }
 </style>
 
 <main>
-  <Portfolio />
+  <Header {mode} />
+  <!-- <Portfolio /> -->
+  <!-- <Footer /> -->
 </main>
