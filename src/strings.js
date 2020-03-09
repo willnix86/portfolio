@@ -1,51 +1,60 @@
-export const hero = {
-  title: "LEMMI",
-  subtitle: "The app that lets you chat!",
-  description: "Lemmi helps people who have difficulty with speech communicate with ease, and re-connect with others.",
-};
+export const navigation = {
+  work: "WORK",
+  about: "ABOUT / CONTACT"
+}
 
-export const features = [
+export const projects = [
   {
-    title: "Mobile",
-    description: "Lemmi is available on iOS and Android devices and is accessible anywhere. Once downloaded, it works with or without a network connection."
+    title: "Lemmi",
+    description: "",
+    webImage: "lemmi-web",
+    mobileImage: "lemmi-mobile",
+    link: "https://www.lemmichat.com",
+    tools: {
+      mobile: ["Swift", "Kotlin"],
+      front: ["Svelte", "Rollup"],
+      testing: ["XCTAssert"]
+    }
   },
   {
-    title: "Simple",
-    description: "The app's text, navigation and layout are clear and easy to use, making it appropriate for all ages and abilities."
+    title: "Get Your Beerings",
+    description: "An app to find pubs, breweries, and beer-gardens nearby on in a place the user plans to visit. Get Your Beering began as a Progressive Web App before being developed for iOS.",
+    webImage: "beerings-web",
+    mobileImage: "beerings-mobile",
+    link: "https://beerings.now.sh/",
+    iosLink: "https://apps.apple.com/us/app/get-your-beerings/id1484223930?ls=1",
+    tools: {
+      mobile: ["Swift", "ArcGIS for iOS"],
+      front: []
+    }
   },
   {
-    title: "Personal",
-    description: "Personalise the app to everyday life by adding personal words, phrases and photos to Lemmi's custom dictionary."
+    title: "Ppl",
+    description: "Built to help users develop the people in their care, whether those people are a student, a client, a subordinate, or a member of the user's congregation. The focus is simple: set goals, track progress, and schedule regular face-time.",
+    webImage: "ppl-web",
+    mobileImage: "ppl-mobile",
+    link: "https://wheremypplat.herokuapp.com/",
+    tools: {
+      front: ["HTML5", "CSS", "JavaScript", "jQuery"],
+      back: ["Node", "Express", "Mocha", "Chai", "REST", "MongoDB", "Mongoose", "Passport", "JWT Authentication"],
+    }
   },
   {
-    title: "Customisable",
-    description: "Select a voice, language, and colour scheme to suit the users needs. iOS users can add additional voices via the device's accessibility settings."
-  },
-  {
-    title: "Intuitive",
-    description: "Text prediction facilitates faster communication by creating quick access to the most commonly used words."
+    title: "English Rules",
+    description: "A web-app for teachers, and students aged 8-10, to aid the learning of English grammar. Teachers can customize a variety of exercises to better match the content of their curriculum.",
+    webImage: "english-web",
+    mobileImage: "english-mobile",
+    link: "https://english-rules.herokuapp.com/",
+    tools: {
+      front: ["React", "Redux", "React Drag n Drop"],
+      back: ["Node", "Express", "Mocha", "Chai", "REST", "MongoDB", "Mongoose", "Passport", "JWT Authentication"],
+      testing: ["Enzyme", "Jest"]
+    }
   }
 ];
 
-export const actions = {
-  contact: {
-    heading: "Have a question?",
-    link: "Get in touch"
-  },
-  waitlist: {
-    heading: "Join the Waitlist",
-    subheading: "Be the first to know when Lemmi is released.",
-    button: "Submit",
-    success: "Success! We'll email you again when Lemmi prepares to launch.",
-    error: "We were unable to sign you up. Please check your email and try again. If you continue to have difficulties, please get in touch."
-  },
-  social: {
-    heading: "Follow Us"
-  }
-};
-
 export const links = {
-  twitter: "https://twitter.com/lemmichat",
-  facebook: "https://www.facebook.com/lemmichat",
-  instagram: "https://www.instagram.com/lemmichat"
+  twitter: "https://twitter.com/willnix86",
+  email: "mailto:will_nixon@me.com?subject=Contact from Website",
+  instagram: "https://www.instagram.com/willnix86"
 }
