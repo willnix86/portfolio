@@ -5,7 +5,7 @@
 
 <style>
   nav {
-    padding: 85px 0px 60px 20px;
+    padding: 40px 0px 40px 20px;
     display: flex;
     justify-content: space-between;
   }

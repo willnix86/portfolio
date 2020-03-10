@@ -4,7 +4,18 @@
 </script>
 
 <style>
+  .portfolio {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 
+  @media only screen and (max-width: 920px) {
+    .portfolio {
+      flex-direction: column;
+    }
+  }
 </style>
 
 <div class="portfolio">
