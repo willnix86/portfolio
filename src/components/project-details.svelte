@@ -43,26 +43,26 @@
   .project-info .title {
     font-size: 28px;
     margin: 0;
-    color: rgb(15, 15, 15);
+    color: #0f0f0f;
   }
   .project-info .description {
     font-size: 18px;
     text-align: left;
-    color: rgb(117, 117, 117);
+    color: #757575;
   }
   .project-info .sub-title {
     margin: 15px 0;
-    color: rgb(15, 15, 15);
+    color: #0f0f0f;
   }
   .tech-stack {
     text-align: left;
   }
   .tools {
     margin: 5px 0;
-    color: rgb(15, 15, 15);
+    color: #0f0f0f;
   }
   .tools span {
-    color: rgb(117, 117, 117);
+    color: #757575;
   }
   .project-info .links {
     width: 100%;

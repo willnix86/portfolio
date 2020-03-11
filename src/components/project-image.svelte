@@ -48,7 +48,7 @@
     margin: 10px 0 0 0;
     color: rgb(233, 233, 233);
     font-size: 16px;
-    background-color: rgb(15, 15, 15);
+    background-color: #0f0f0f;
     padding: 10px;
     width: 150px;
     border-radius: 5px;
