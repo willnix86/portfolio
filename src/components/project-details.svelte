@@ -64,11 +64,12 @@
   }
   .project-info .links {
     width: 100%;
-    margin: 25px 0 25px -15px;
+    margin: 25px 0;
     text-align: left;
   }
   .project-info .links a {
     font-size: 18px;
+    margin-right: 15px;
   }
   .project-info .navigation {
     display: flex;
@@ -81,6 +82,7 @@
   }
   .mobile-image-wrapper {
     width: 50%;
+    height: auto;
     display: flex;
     justify-content: flex-end;
   }
@@ -96,7 +98,7 @@
       <h2 class="title">{project.title.toUpperCase()}</h2>
       <p class="description">{project.description}</p>
       <div class="tech-stack">
-        <h3 class="sub-title">TOOLS:</h3>
+        <h3 class="sub-title">TECHNOLOGIES:</h3>
         {#each Object.keys(project.tools) as tool}
           <p class="tools">
             <b>{tool}</b>

@@ -16,6 +16,10 @@
     flex-direction: row;
     margin-bottom: 6px;
   }
+
+  .social-wrapper a {
+    margin-left: 15px;
+  }
 </style>
 
 <footer>

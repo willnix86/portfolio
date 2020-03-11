@@ -31,6 +31,10 @@
     flex-direction: row;
     margin-bottom: 6px;
   }
+
+  .links-wrapper button {
+    margin-left: 15px;
+  }
 </style>
 
 <nav>
