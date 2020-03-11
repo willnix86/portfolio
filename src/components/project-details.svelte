@@ -70,7 +70,7 @@
     text-align: left;
   }
   .project-info .links a {
-    font-size: 18px;
+    font-size: 16px;
     margin-right: 15px;
   }
   .project-info .navigation {
