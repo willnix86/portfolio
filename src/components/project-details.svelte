@@ -9,6 +9,8 @@
   );
   let projectID = projects.indexOf(project);
   beforeUpdate(() => {
+    console.log(projectID);
+    console.log(selectedProject);
     project = projects.find(
       p => p.title.toLowerCase() === selectedProject.toLowerCase()
     );
@@ -17,7 +19,7 @@
 
 <style>
   .project-details-wrapper {
-    margin-top: 20px;
+    margin: 20px 0;
     display: flex;
     flex-direction: column;
   }
@@ -81,6 +83,7 @@
     font-size: 12px;
   }
   .mobile-image-wrapper {
+    padding: 3px 0;
     width: 50%;
     height: auto;
     display: flex;

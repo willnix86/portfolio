@@ -33,7 +33,7 @@
   }
 
   .links-wrapper button {
-    margin-left: 15px;
+    margin-left: 20px;
   }
 </style>
 
