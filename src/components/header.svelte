@@ -42,15 +42,12 @@
     <h1 on:click={() => handleClickHome()} class="title">WILL NIXON</h1>
   </div>
   <div class="links-wrapper">
-    <button
-      on:click={() => handleClickNavigation(navigation.work)}
-      class={`${page === navigation.work ? 'selected' : ''}`}>
-      {navigation.work}
-    </button>
-    <button
-      on:click={() => handleClickNavigation(navigation.about)}
-      class={`${page === navigation.about ? 'selected' : ''}`}>
-      {navigation.about}
-    </button>
+    {#each Object.keys(navigation) as link}
+      <button
+        on:click={() => handleClickNavigation(navigation[link])}
+        class={`${page === navigation[link] ? 'selected' : ''}`}>
+        {navigation[link]}
+      </button>
+    {/each}
   </div>
 </nav>

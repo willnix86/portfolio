@@ -38,20 +38,6 @@ export const projects = [
     }
   },
   {
-    title: "Ppl",
-    description: "Built to help users develop the people in their care, whether those people are a student, a client, a subordinate, or a member of the user's congregation. The focus is simple: set goals, track progress, and schedule regular face-time.",
-    webImage: "ppl-web",
-    mobileImage: "ppl-mobile",
-    tools: {
-      "Front-End": ["HTML5", "CSS", "JavaScript", "jQuery"],
-      "Back-End": ["Node", "Express", "Mocha", "Chai", "REST", "MongoDB", "Mongoose", "Passport", "JWT Authentication"],
-    },
-    links: {
-      "Website": "https://wheremypplat.herokuapp.com/",
-      "Repo": "https://github.com/willnix86/ppl"
-    }
-  },
-  {
     title: "English Rules",
     description: "A web-app for teachers, and students aged 8-10, to aid the learning of English grammar. Teachers can customize a variety of exercises to better match the content of their curriculum.",
     webImage: "english-web",
@@ -66,11 +52,29 @@ export const projects = [
       "Repo (client)": "https://github.com/willnix86/english-rules-client",
       "Repo (api)": "https://github.com/willnix86/english-rules-server",
     }
-  }
+  },
+  {
+    title: "Ppl",
+    description: "Built to help users develop the people in their care, whether those people are a student, a client, a subordinate, or a member of the user's congregation. The focus is simple: set goals, track progress, and schedule regular face-time.",
+    webImage: "ppl-web",
+    mobileImage: "ppl-mobile",
+    tools: {
+      "Front-End": ["HTML5", "CSS", "JavaScript", "jQuery"],
+      "Back-End": ["Node", "Express", "Mocha", "Chai", "REST", "MongoDB", "Mongoose", "Passport", "JWT Authentication"],
+    },
+    links: {
+      "Website": "https://wheremypplat.herokuapp.com/",
+      "Repo": "https://github.com/willnix86/ppl"
+    }
+  },
 ];
 
 export const links = {
   twitter: { label: "TWITTER", url: "https://twitter.com/willnix86" },
-  email: { label: "EMAIL", url: "mailto:will_nixon@me.com?subject=Contact from Website" },
+  linkedin: { label: "LINKEDIN", url: "https://www.linkedin.com/in/willnixon1" },
   instagram: { label: "INSTAGRAM", url: "https://www.instagram.com/willnix86" }
 };
+
+export const about = {
+  email: { label: "Contact Me", url: "mailto:will_nixon@me.com?subject='Contact from Website'" }
+}

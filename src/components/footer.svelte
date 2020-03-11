@@ -24,8 +24,8 @@
 
 <footer>
   <div class="social-wrapper">
-    <a href={links.email.url} target="_blank">{links.email.label}</a>
-    <a href={links.twitter.url} target="_blank">{links.twitter.label}</a>
-    <a href={links.instagram.url} target="_blank">{links.instagram.label}</a>
+    {#each Object.keys(links) as link}
+      <a href={links[link].url} target="_blank">{links[link].label}</a>
+    {/each}
   </div>
 </footer>
