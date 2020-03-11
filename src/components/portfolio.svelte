@@ -1,6 +1,11 @@
 <script>
   import ProjectImage from "./project-image.svelte";
+  import ProjectDetails from "./project-details.svelte";
   import { projects } from "../strings.js";
+
+  export let selectedProject;
+  export let handleClickProject;
+  export let handleClickNavigation;
 </script>
 
 <style>
@@ -19,7 +24,11 @@
 </style>
 
 <div class="portfolio">
-  {#each projects as { title, webImage }, index}
-    <ProjectImage {title} image={webImage} />
-  {/each}
+  {#if selectedProject}
+    <ProjectDetails {selectedProject} {handleClickProject} {handleClickNavigation} />
+  {:else}
+    {#each projects as { title, webImage }, index}
+      <ProjectImage {title} image={webImage} {handleClickProject} />
+    {/each}
+  {/if}
 </div>

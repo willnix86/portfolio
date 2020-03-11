@@ -6,14 +6,18 @@ export const navigation = {
 export const projects = [
   {
     title: "Lemmi",
-    description: "",
+    description: "An Android and iOS app that helps people with speech difficulties communicate with ease, and re-connect with others. Initially developed for the web, then converted to a hybrid application using Apache Cordova, I ported Lemmi to native SDKs to improve performance and make use of APIs not accessible otherwise. (Launching Q3 2020)",
     webImage: "lemmi-web",
     mobileImage: "lemmi-mobile",
     link: "https://www.lemmichat.com",
     tools: {
-      mobile: ["Swift", "Kotlin"],
-      front: ["Svelte", "Rollup"],
-      testing: ["XCTAssert"]
+      "Mobile": ["Swift", "Kotlin"],
+      "Front-End": ["Svelte", "Rollup"],
+      "Testing": ["XCTAssert"]
+    },
+    links: {
+      "Website": "https://www.lemmichat.com",
+      "Repo (web)": "https://github.com/willnix86/Lemmi"
     }
   },
   {
@@ -24,8 +28,14 @@ export const projects = [
     link: "https://beerings.now.sh/",
     iosLink: "https://apps.apple.com/us/app/get-your-beerings/id1484223930?ls=1",
     tools: {
-      mobile: ["Swift", "ArcGIS for iOS"],
-      front: []
+      "Mobile": ["Swift", "ArcGIS for iOS"],
+      "Front-End": []
+    },
+    links: {
+      "Website": "https://beerings.now.sh/",
+      "App Store": "https://apps.apple.com/us/app/get-your-beerings/id1484223930?ls=1",
+      "Repo (web)": "https://github.com/willnix86/get-your-beerings",
+      "Repo (mobile)": "https://github.com/willnix86/beerings-ios-public"
     }
   },
   {
@@ -35,8 +45,12 @@ export const projects = [
     mobileImage: "ppl-mobile",
     link: "https://wheremypplat.herokuapp.com/",
     tools: {
-      front: ["HTML5", "CSS", "JavaScript", "jQuery"],
-      back: ["Node", "Express", "Mocha", "Chai", "REST", "MongoDB", "Mongoose", "Passport", "JWT Authentication"],
+      "Front-End": ["HTML5", "CSS", "JavaScript", "jQuery"],
+      "Back-End": ["Node", "Express", "Mocha", "Chai", "REST", "MongoDB", "Mongoose", "Passport", "JWT Authentication"],
+    },
+    links: {
+      "Website": "https://wheremypplat.herokuapp.com/",
+      "Repo": "https://github.com/willnix86/ppl"
     }
   },
   {
@@ -46,15 +60,20 @@ export const projects = [
     mobileImage: "english-mobile",
     link: "https://english-rules.herokuapp.com/",
     tools: {
-      front: ["React", "Redux", "React Drag n Drop"],
-      back: ["Node", "Express", "Mocha", "Chai", "REST", "MongoDB", "Mongoose", "Passport", "JWT Authentication"],
-      testing: ["Enzyme", "Jest"]
+      "Front-End": ["React", "Redux", "React Drag n Drop"],
+      "Back-End": ["Node", "Express", "Mocha", "Chai", "REST", "MongoDB", "Mongoose", "Passport", "JWT Authentication"],
+      "Testing": ["Enzyme", "Jest"]
+    },
+    links: {
+      "Website": "https://english-rules.herokuapp.com/",
+      "Repo (client)": "https://github.com/willnix86/english-rules-client",
+      "Repo (api)": "https://github.com/willnix86/english-rules-server",
     }
   }
 ];
 
 export const links = {
-  twitter: "https://twitter.com/willnix86",
-  email: "mailto:will_nixon@me.com?subject=Contact from Website",
-  instagram: "https://www.instagram.com/willnix86"
-}
+  twitter: { label: "TWITTER", url: "https://twitter.com/willnix86" },
+  email: { label: "EMAIL", url: "mailto:will_nixon@me.com?subject=Contact from Website" },
+  instagram: { label: "INSTAGRAM", url: "https://www.instagram.com/willnix86" }
+};

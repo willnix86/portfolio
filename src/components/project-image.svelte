@@ -1,10 +1,11 @@
 <script>
   export let image;
   export let title;
+  export let handleClickProject;
 </script>
 
 <style>
-  .project-wrapper {
+  .project-image-wrapper {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -22,7 +23,7 @@
     transition: opacity 300ms;
   }
 
-  .project-wrapper:hover .project-image {
+  .project-image-wrapper:hover .project-image {
     opacity: 0.5;
   }
 
@@ -39,8 +40,8 @@
     transition: opacity 250ms;
   }
 
-  .project-wrapper:hover .title-wrapper {
-    opacity: 1;
+  .project-image-wrapper:hover .title-wrapper {
+    opacity: 0.85;
   }
 
   .project-title {
@@ -51,16 +52,18 @@
     padding: 10px;
     width: 150px;
     border-radius: 5px;
+    letter-spacing: 0.5px;
   }
 
   @media only screen and (max-width: 920px) {
-    .project-wrapper {
+    .project-image-wrapper {
       width: 100%;
+      margin: 15px 0;
     }
   }
 </style>
 
-<div class="project-wrapper">
+<div class="project-image-wrapper" on:click={() => handleClickProject(title)}>
   <div class="image-wrapper">
     <img
       class="project-image"

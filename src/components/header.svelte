@@ -1,11 +1,13 @@
 <script>
   import { navigation } from "../strings.js";
-  let selected = navigation.work;
+  export let page;
+  export let handleClickNavigation;
+  export let handleClickHome;
 </script>
 
 <style>
   nav {
-    padding: 40px 0px 40px 20px;
+    padding: 40px 0px 40px 0px;
     display: flex;
     justify-content: space-between;
   }
@@ -29,31 +31,22 @@
     flex-direction: row;
     margin-bottom: 6px;
   }
-
-  .links-wrapper a {
-    font-size: 16px;
-    /* margin: 0 15px; */
-    color: rgb(117, 117, 117);
-    cursor: pointer;
-    margin: 0 20px;
-  }
-
-  .links-wrapper a:hover,
-  .links-wrapper a.selected {
-    color: rgb(15, 15, 15);
-  }
 </style>
 
 <nav>
   <div class="title-wrapper">
-    <h1 class="title">WILL NIXON</h1>
+    <h1 on:click={() => handleClickHome()} class="title">WILL NIXON</h1>
   </div>
   <div class="links-wrapper">
-    <a class={`${selected === navigation.work ? 'selected' : ''}`}>
+    <button
+      on:click={() => handleClickNavigation(navigation.work)}
+      class={`${page === navigation.work ? 'selected' : ''}`}>
       {navigation.work}
-    </a>
-    <a class={`${selected === navigation.about ? 'selected' : ''}`}>
+    </button>
+    <button
+      on:click={() => handleClickNavigation(navigation.about)}
+      class={`${page === navigation.about ? 'selected' : ''}`}>
       {navigation.about}
-    </a>
+    </button>
   </div>
 </nav>
