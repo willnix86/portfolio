@@ -11,11 +11,10 @@ export default {
   output: {
     sourcemap: true,
     format: 'iife',
-    name: 'App',
+    name: 'app',
     file: 'public/build/bundle.js',
   },
   plugins: [
-    resolve(),
     svelte({
       // enable run-time checks when not in production
       dev: !production,
