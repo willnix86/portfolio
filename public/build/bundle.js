@@ -1829,19 +1829,19 @@ var app = (function () {
     			t5 = space();
     			a = element("a");
     			t6 = text(t6_value);
-    			attr_dev(p0, "class", "svelte-13msycp");
-    			add_location(p0, file$4, 31, 4, 477);
-    			attr_dev(p1, "class", "svelte-13msycp");
-    			add_location(p1, file$4, 35, 4, 614);
-    			attr_dev(p2, "class", "svelte-13msycp");
-    			add_location(p2, file$4, 44, 4, 1137);
-    			attr_dev(div0, "class", "svelte-13msycp");
-    			add_location(div0, file$4, 30, 2, 467);
+    			attr_dev(p0, "class", "svelte-4na57q");
+    			add_location(p0, file$4, 32, 4, 499);
+    			attr_dev(p1, "class", "svelte-4na57q");
+    			add_location(p1, file$4, 36, 4, 636);
+    			attr_dev(p2, "class", "svelte-4na57q");
+    			add_location(p2, file$4, 45, 4, 1159);
+    			attr_dev(div0, "class", "svelte-4na57q");
+    			add_location(div0, file$4, 31, 2, 489);
     			attr_dev(a, "href", a_href_value = about.email.url);
-    			attr_dev(a, "class", "svelte-13msycp");
-    			add_location(a, file$4, 50, 2, 1360);
-    			attr_dev(div1, "class", "about svelte-13msycp");
-    			add_location(div1, file$4, 29, 0, 445);
+    			attr_dev(a, "class", "svelte-4na57q");
+    			add_location(a, file$4, 51, 2, 1382);
+    			attr_dev(div1, "class", "about svelte-4na57q");
+    			add_location(div1, file$4, 30, 0, 467);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");

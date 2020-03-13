@@ -5,9 +5,10 @@
 <style>
   .about {
     text-align: left;
+    max-width: 800px;
   }
   .about div {
-    margin-bottom: 50px;
+    margin-bottom: 80px;
   }
   .about p {
     font-size: 18px;
