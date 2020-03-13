@@ -112,7 +112,7 @@
       </div>
       <div class="links">
         {#each Object.keys(project.links) as link}
-          <a href={project.links[link]}>{link}</a>
+          <a href={project.links[link]} target="_blank">{link}</a>
         {/each}
       </div>
       <div class="navigation">

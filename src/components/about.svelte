@@ -49,5 +49,5 @@
       is slated for release in Q3 2020.
     </p>
   </div>
-  <a href={about.email.url}>{about.email.label}</a>
+  <a href={about.email.url} target="_blank">{about.email.label}</a>
 </div>
