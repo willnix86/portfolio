@@ -984,6 +984,7 @@ var app = (function () {
     			a = element("a");
     			t = text(t_value);
     			attr_dev(a, "href", a_href_value = /*project*/ ctx[2].links[/*link*/ ctx[8]]);
+    			attr_dev(a, "target", "_blank");
     			attr_dev(a, "class", "svelte-r82ckf");
     			add_location(a, file$2, 114, 10, 2560);
     		},
@@ -1123,22 +1124,22 @@ var app = (function () {
     			attr_dev(div1, "class", "links svelte-r82ckf");
     			add_location(div1, file$2, 112, 6, 2479);
     			attr_dev(button0, "class", "svelte-r82ckf");
-    			add_location(button0, file$2, 118, 8, 2669);
+    			add_location(button0, file$2, 118, 8, 2685);
     			attr_dev(button1, "class", "svelte-r82ckf");
-    			add_location(button1, file$2, 122, 10, 2799);
+    			add_location(button1, file$2, 122, 10, 2815);
     			attr_dev(button2, "class", "svelte-r82ckf");
-    			add_location(button2, file$2, 127, 10, 2962);
-    			add_location(div2, file$2, 121, 8, 2783);
+    			add_location(button2, file$2, 127, 10, 2978);
+    			add_location(div2, file$2, 121, 8, 2799);
     			attr_dev(div3, "class", "navigation svelte-r82ckf");
-    			add_location(div3, file$2, 117, 6, 2636);
+    			add_location(div3, file$2, 117, 6, 2652);
     			attr_dev(div4, "class", "project-info svelte-r82ckf");
     			add_location(div4, file$2, 99, 4, 2031);
     			attr_dev(img1, "class", "project-mobile-image svelte-r82ckf");
     			if (img1.src !== (img1_src_value = `images/${/*project*/ ctx[2].mobileImage}.png`)) attr_dev(img1, "src", img1_src_value);
     			attr_dev(img1, "alt", img1_alt_value = `${/*project*/ ctx[2].title} mobile image`);
-    			add_location(img1, file$2, 136, 6, 3188);
+    			add_location(img1, file$2, 136, 6, 3204);
     			attr_dev(div5, "class", "mobile-image-wrapper svelte-r82ckf");
-    			add_location(div5, file$2, 135, 4, 3147);
+    			add_location(div5, file$2, 135, 4, 3163);
     			attr_dev(div6, "class", "project-details svelte-r82ckf");
     			add_location(div6, file$2, 98, 2, 1997);
     			attr_dev(div7, "class", "project-details-wrapper svelte-r82ckf");
@@ -1838,6 +1839,7 @@ var app = (function () {
     			attr_dev(div0, "class", "svelte-4na57q");
     			add_location(div0, file$4, 31, 2, 489);
     			attr_dev(a, "href", a_href_value = about.email.url);
+    			attr_dev(a, "target", "_blank");
     			attr_dev(a, "class", "svelte-4na57q");
     			add_location(a, file$4, 51, 2, 1382);
     			attr_dev(div1, "class", "about svelte-4na57q");
