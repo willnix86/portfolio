@@ -32,7 +32,7 @@
   <div>
     <p>
       Hello, I'm Will. I'm a Software Developer experienced in full-stack and
-      hybrid mobile development. I buildn ative apps for Android and iOS when
+      hybrid mobile development. I build native apps for Android and iOS when
       I'm not buried in the front-end.
     </p>
     <p>
