@@ -1820,7 +1820,7 @@ var app = (function () {
     			div1 = element("div");
     			div0 = element("div");
     			p0 = element("p");
-    			p0.textContent = "Hello, I'm Will. I'm a Software Developer building full-stack applications\n      by day and mobile apps by night.";
+    			p0.textContent = "Hello, I'm Will. I'm a Software Developer experienced in full-stack and\n      hybrid mobile development. I buildn ative apps for Android and iOS when\n      I'm not buried in the front-end.";
     			t1 = space();
     			p1 = element("p");
     			p1.textContent = "I currently live in Arlington, Virginia, with my wife and dog, and work\n      for Blue Raster utilizing Esri's ArcGIS technology to build solutions for\n      non-profit, government, and commercial organizations. Since joining the\n      team, my work has been demoed in front of thousands of users at Esri's\n      User Conference 2019, I've developed Azure solutions for a national real\n      estate company, and solved 2 year old problems for one of the Blue\n      Raster's longest-standing clients.";
@@ -1833,15 +1833,15 @@ var app = (function () {
     			attr_dev(p0, "class", "svelte-4na57q");
     			add_location(p0, file$4, 32, 4, 499);
     			attr_dev(p1, "class", "svelte-4na57q");
-    			add_location(p1, file$4, 36, 4, 636);
+    			add_location(p1, file$4, 37, 4, 711);
     			attr_dev(p2, "class", "svelte-4na57q");
-    			add_location(p2, file$4, 45, 4, 1159);
+    			add_location(p2, file$4, 46, 4, 1234);
     			attr_dev(div0, "class", "svelte-4na57q");
     			add_location(div0, file$4, 31, 2, 489);
     			attr_dev(a, "href", a_href_value = about.email.url);
     			attr_dev(a, "target", "_blank");
     			attr_dev(a, "class", "svelte-4na57q");
-    			add_location(a, file$4, 51, 2, 1382);
+    			add_location(a, file$4, 52, 2, 1457);
     			attr_dev(div1, "class", "about svelte-4na57q");
     			add_location(div1, file$4, 30, 0, 467);
     		},

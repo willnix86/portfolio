@@ -31,8 +31,9 @@
 <div class="about">
   <div>
     <p>
-      Hello, I'm Will. I'm a Software Developer building full-stack applications
-      by day and mobile apps by night.
+      Hello, I'm Will. I'm a Software Developer experienced in full-stack and
+      hybrid mobile development. I buildn ative apps for Android and iOS when
+      I'm not buried in the front-end.
     </p>
     <p>
       I currently live in Arlington, Virginia, with my wife and dog, and work
