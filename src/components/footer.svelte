@@ -20,6 +20,11 @@
   .social-wrapper a {
     margin-left: 15px;
   }
+  @media only screen and (max-width: 545px) {
+    footer {
+      padding: 80px 0px 60px 00px;
+    }
+  }
 </style>
 
 <footer>

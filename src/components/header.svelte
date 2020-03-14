@@ -35,6 +35,16 @@
   .links-wrapper button {
     margin-left: 20px;
   }
+  @media only screen and (max-width: 545px) {
+    nav {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .links-wrapper button {
+      margin: 0 20px;
+    }
+  }
 </style>
 
 <nav>
