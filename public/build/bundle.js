@@ -2309,7 +2309,7 @@ var app = (function () {
     			if (if_block1) if_block1.c();
     			t2 = space();
     			create_component(footer.$$.fragment);
-    			attr_dev(main, "class", "svelte-16ahy51");
+    			attr_dev(main, "class", "svelte-3gwvnr");
     			add_location(main, file$6, 33, 0, 697);
     		},
     		l: function claim(nodes) {

@@ -25,7 +25,7 @@
 
 <style>
   main {
-    max-width: 1100px;
+    max-width: 1300px;
     margin: 0 auto;
     text-align: center;
   }
