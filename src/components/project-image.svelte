@@ -61,6 +61,13 @@
       margin: 15px 0;
     }
   }
+
+  @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
+    .project-image-wrapper {
+      width: 100%;
+      margin: 15px 0;
+    }
+  }
 </style>
 
 <div class="project-image-wrapper" on:click={() => handleClickProject(title)}>

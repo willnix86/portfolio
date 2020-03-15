@@ -753,18 +753,18 @@ var app = (function () {
     			div0 = element("div");
     			p = element("p");
     			t1 = text(t1_value);
-    			attr_dev(img, "class", "project-image svelte-1qc7xmy");
+    			attr_dev(img, "class", "project-image svelte-myettk");
     			if (img.src !== (img_src_value = `images/${/*image*/ ctx[0]}.png`)) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", img_alt_value = `${/*title*/ ctx[1]} website image`);
-    			add_location(img, file$1, 67, 4, 1266);
-    			attr_dev(p, "class", "project-title svelte-1qc7xmy");
-    			add_location(p, file$1, 72, 6, 1411);
-    			attr_dev(div0, "class", "title-wrapper svelte-1qc7xmy");
-    			add_location(div0, file$1, 71, 4, 1377);
+    			add_location(img, file$1, 74, 4, 1472);
+    			attr_dev(p, "class", "project-title svelte-myettk");
+    			add_location(p, file$1, 79, 6, 1617);
+    			attr_dev(div0, "class", "title-wrapper svelte-myettk");
+    			add_location(div0, file$1, 78, 4, 1583);
     			attr_dev(div1, "class", "image-wrapper");
-    			add_location(div1, file$1, 66, 2, 1234);
-    			attr_dev(div2, "class", "project-image-wrapper svelte-1qc7xmy");
-    			add_location(div2, file$1, 65, 0, 1153);
+    			add_location(div1, file$1, 73, 2, 1440);
+    			attr_dev(div2, "class", "project-image-wrapper svelte-myettk");
+    			add_location(div2, file$1, 72, 0, 1359);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
