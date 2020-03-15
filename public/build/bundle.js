@@ -46,6 +46,9 @@ var app = (function () {
     function element(name) {
         return document.createElement(name);
     }
+    function svg_element(name) {
+        return document.createElementNS('http://www.w3.org/2000/svg', name);
+    }
     function text(data) {
         return document.createTextNode(data);
     }
@@ -1409,13 +1412,13 @@ var app = (function () {
 
     function get_each_context$2(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[3] = list[i].title;
-    	child_ctx[4] = list[i].webImage;
-    	child_ctx[6] = i;
+    	child_ctx[4] = list[i].title;
+    	child_ctx[5] = list[i].webImage;
+    	child_ctx[7] = i;
     	return child_ctx;
     }
 
-    // (29:2) {:else}
+    // (64:2) {:else}
     function create_else_block(ctx) {
     	let each_1_anchor;
     	let current;
@@ -1504,16 +1507,24 @@ var app = (function () {
     		block,
     		id: create_else_block.name,
     		type: "else",
-    		source: "(29:2) {:else}",
+    		source: "(64:2) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (27:2) {#if selectedProject}
+    // (44:2) {#if selectedProject}
     function create_if_block(ctx) {
+    	let button;
+    	let svg;
+    	let path0;
+    	let path1;
+    	let t0;
+    	let p;
+    	let t2;
     	let current;
+    	let dispose;
 
     	const projectdetails = new Project_details({
     			props: {
@@ -1526,11 +1537,44 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
+    			button = element("button");
+    			svg = svg_element("svg");
+    			path0 = svg_element("path");
+    			path1 = svg_element("path");
+    			t0 = space();
+    			p = element("p");
+    			p.textContent = "Back";
+    			t2 = space();
     			create_component(projectdetails.$$.fragment);
+    			attr_dev(path0, "d", "M21 11H6.83l3.58-3.59L9 6l-6 6 6 6 1.41-1.41L6.83 13H21z");
+    			attr_dev(path0, "fill", "#757575");
+    			attr_dev(path0, "class", "svelte-14gq9ad");
+    			add_location(path0, file$3, 52, 8, 1120);
+    			attr_dev(path1, "d", "M0 0h24v24H0z");
+    			attr_dev(path1, "fill", "none");
+    			attr_dev(path1, "class", "svelte-14gq9ad");
+    			add_location(path1, file$3, 55, 8, 1233);
+    			attr_dev(svg, "xmlns", "http://www.w3.org/2000/svg");
+    			attr_dev(svg, "height", "24");
+    			attr_dev(svg, "viewBox", "0 0 24 24");
+    			attr_dev(svg, "width", "24");
+    			add_location(svg, file$3, 47, 6, 996);
+    			attr_dev(p, "class", "svelte-14gq9ad");
+    			add_location(p, file$3, 57, 6, 1291);
+    			attr_dev(button, "class", "back-button svelte-14gq9ad");
+    			add_location(button, file$3, 44, 4, 893);
     		},
     		m: function mount(target, anchor) {
+    			insert_dev(target, button, anchor);
+    			append_dev(button, svg);
+    			append_dev(svg, path0);
+    			append_dev(svg, path1);
+    			append_dev(button, t0);
+    			append_dev(button, p);
+    			insert_dev(target, t2, anchor);
     			mount_component(projectdetails, target, anchor);
     			current = true;
+    			dispose = listen_dev(button, "click", /*click_handler*/ ctx[3], false, false, false);
     		},
     		p: function update(ctx, dirty) {
     			const projectdetails_changes = {};
@@ -1549,7 +1593,10 @@ var app = (function () {
     			current = false;
     		},
     		d: function destroy(detaching) {
+    			if (detaching) detach_dev(button);
+    			if (detaching) detach_dev(t2);
     			destroy_component(projectdetails, detaching);
+    			dispose();
     		}
     	};
 
@@ -1557,21 +1604,21 @@ var app = (function () {
     		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(27:2) {#if selectedProject}",
+    		source: "(44:2) {#if selectedProject}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (30:4) {#each projects as { title, webImage }
+    // (65:4) {#each projects as { title, webImage }
     function create_each_block$2(ctx) {
     	let current;
 
     	const projectimage = new Project_image({
     			props: {
-    				title: /*title*/ ctx[3],
-    				image: /*webImage*/ ctx[4],
+    				title: /*title*/ ctx[4],
+    				image: /*webImage*/ ctx[5],
     				handleClickProject: /*handleClickProject*/ ctx[1]
     			},
     			$$inline: true
@@ -1608,7 +1655,7 @@ var app = (function () {
     		block,
     		id: create_each_block$2.name,
     		type: "each",
-    		source: "(30:4) {#each projects as { title, webImage }",
+    		source: "(65:4) {#each projects as { title, webImage }",
     		ctx
     	});
 
@@ -1635,8 +1682,8 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			if_block.c();
-    			attr_dev(div, "class", "portfolio svelte-1o1om9d");
-    			add_location(div, file$3, 25, 0, 497);
+    			attr_dev(div, "class", "portfolio svelte-14gq9ad");
+    			add_location(div, file$3, 42, 0, 841);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1709,6 +1756,7 @@ var app = (function () {
 
     	let { $$slots = {}, $$scope } = $$props;
     	validate_slots("Portfolio", $$slots, []);
+    	const click_handler = () => handleClickNavigation(navigation.work);
 
     	$$self.$set = $$props => {
     		if ("selectedProject" in $$props) $$invalidate(0, selectedProject = $$props.selectedProject);
@@ -1720,6 +1768,7 @@ var app = (function () {
     		ProjectImage: Project_image,
     		ProjectDetails: Project_details,
     		projects,
+    		navigation,
     		selectedProject,
     		handleClickProject,
     		handleClickNavigation
@@ -1735,7 +1784,7 @@ var app = (function () {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [selectedProject, handleClickProject, handleClickNavigation];
+    	return [selectedProject, handleClickProject, handleClickNavigation, click_handler];
     }
 
     class Portfolio extends SvelteComponentDev {
@@ -1800,69 +1849,110 @@ var app = (function () {
     const file$4 = "src/components/about.svelte";
 
     function create_fragment$4(ctx) {
-    	let div1;
+    	let div2;
     	let div0;
+    	let svg;
+    	let path0;
+    	let path1;
+    	let t0;
+    	let button;
+    	let t2;
+    	let div1;
     	let p0;
-    	let t1;
+    	let t4;
     	let p1;
-    	let t3;
-    	let p2;
-    	let t5;
-    	let a;
-    	let t6_value = about.email.label + "";
     	let t6;
+    	let p2;
+    	let t8;
+    	let a;
+    	let t9_value = about.email.label + "";
+    	let t9;
     	let a_href_value;
+    	let dispose;
 
     	const block = {
     		c: function create() {
-    			div1 = element("div");
+    			div2 = element("div");
     			div0 = element("div");
+    			svg = svg_element("svg");
+    			path0 = svg_element("path");
+    			path1 = svg_element("path");
+    			t0 = space();
+    			button = element("button");
+    			button.textContent = "Back";
+    			t2 = space();
+    			div1 = element("div");
     			p0 = element("p");
     			p0.textContent = "Hello, I'm Will. I'm a Software Developer experienced in building\n      full-stack and hybrid mobile applications. When I'm not buried in the\n      front-end, I create native apps for Android and iOS.";
-    			t1 = space();
+    			t4 = space();
     			p1 = element("p");
     			p1.textContent = "I currently live in Arlington, Virginia, with my wife and dog, and work\n      for Blue Raster utilizing Esri's ArcGIS technology to build solutions for\n      non-profit, government, and commercial organizations. Since joining the\n      team, my work has been demoed in front of thousands of users at Esri's\n      User Conference 2019, I've developed Azure solutions for a national real\n      estate company, and solved 2 year old problems for one of the Blue\n      Raster's longest-standing clients.";
-    			t3 = space();
+    			t6 = space();
     			p2 = element("p");
     			p2.textContent = "Outside of work, I am the developer and co-founder of a software company\n      focusing on iOS and Android development. Lemmi, our flagship application,\n      is slated for release in Q3 2020.";
-    			t5 = space();
+    			t8 = space();
     			a = element("a");
-    			t6 = text(t6_value);
-    			attr_dev(p0, "class", "svelte-4na57q");
-    			add_location(p0, file$4, 32, 4, 499);
-    			attr_dev(p1, "class", "svelte-4na57q");
-    			add_location(p1, file$4, 37, 4, 723);
-    			attr_dev(p2, "class", "svelte-4na57q");
-    			add_location(p2, file$4, 46, 4, 1246);
-    			attr_dev(div0, "class", "svelte-4na57q");
-    			add_location(div0, file$4, 31, 2, 489);
+    			t9 = text(t9_value);
+    			attr_dev(path0, "d", "M21 11H6.83l3.58-3.59L9 6l-6 6 6 6 1.41-1.41L6.83 13H21z");
+    			attr_dev(path0, "fill", "#757575");
+    			attr_dev(path0, "class", "svelte-oqs3ny");
+    			add_location(path0, file$4, 58, 6, 1062);
+    			attr_dev(path1, "d", "M0 0h24v24H0z");
+    			attr_dev(path1, "fill", "none");
+    			attr_dev(path1, "class", "svelte-oqs3ny");
+    			add_location(path1, file$4, 61, 6, 1169);
+    			attr_dev(svg, "xmlns", "http://www.w3.org/2000/svg");
+    			attr_dev(svg, "height", "24");
+    			attr_dev(svg, "viewBox", "0 0 24 24");
+    			attr_dev(svg, "width", "24");
+    			add_location(svg, file$4, 53, 4, 948);
+    			add_location(button, file$4, 63, 4, 1223);
+    			attr_dev(div0, "class", "back-button svelte-oqs3ny");
+    			add_location(div0, file$4, 50, 2, 854);
+    			attr_dev(p0, "class", "svelte-oqs3ny");
+    			add_location(p0, file$4, 66, 4, 1266);
+    			attr_dev(p1, "class", "svelte-oqs3ny");
+    			add_location(p1, file$4, 71, 4, 1490);
+    			attr_dev(p2, "class", "svelte-oqs3ny");
+    			add_location(p2, file$4, 80, 4, 2013);
+    			attr_dev(div1, "class", "svelte-oqs3ny");
+    			add_location(div1, file$4, 65, 2, 1256);
     			attr_dev(a, "href", a_href_value = about.email.url);
     			attr_dev(a, "target", "_blank");
-    			attr_dev(a, "class", "svelte-4na57q");
-    			add_location(a, file$4, 52, 2, 1469);
-    			attr_dev(div1, "class", "about svelte-4na57q");
-    			add_location(div1, file$4, 30, 0, 467);
+    			attr_dev(a, "class", "svelte-oqs3ny");
+    			add_location(a, file$4, 86, 2, 2236);
+    			attr_dev(div2, "class", "about svelte-oqs3ny");
+    			add_location(div2, file$4, 49, 0, 832);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div1, anchor);
-    			append_dev(div1, div0);
-    			append_dev(div0, p0);
-    			append_dev(div0, t1);
-    			append_dev(div0, p1);
-    			append_dev(div0, t3);
-    			append_dev(div0, p2);
-    			append_dev(div1, t5);
-    			append_dev(div1, a);
-    			append_dev(a, t6);
+    			insert_dev(target, div2, anchor);
+    			append_dev(div2, div0);
+    			append_dev(div0, svg);
+    			append_dev(svg, path0);
+    			append_dev(svg, path1);
+    			append_dev(div0, t0);
+    			append_dev(div0, button);
+    			append_dev(div2, t2);
+    			append_dev(div2, div1);
+    			append_dev(div1, p0);
+    			append_dev(div1, t4);
+    			append_dev(div1, p1);
+    			append_dev(div1, t6);
+    			append_dev(div1, p2);
+    			append_dev(div2, t8);
+    			append_dev(div2, a);
+    			append_dev(a, t9);
+    			dispose = listen_dev(div0, "click", /*click_handler*/ ctx[1], false, false, false);
     		},
     		p: noop,
     		i: noop,
     		o: noop,
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div1);
+    			if (detaching) detach_dev(div2);
+    			dispose();
     		}
     	};
 
@@ -1878,7 +1968,8 @@ var app = (function () {
     }
 
     function instance$4($$self, $$props, $$invalidate) {
-    	const writable_props = [];
+    	let { handleClickNavigation } = $$props;
+    	const writable_props = ["handleClickNavigation"];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console.warn(`<About> was created with unknown prop '${key}'`);
@@ -1886,14 +1977,29 @@ var app = (function () {
 
     	let { $$slots = {}, $$scope } = $$props;
     	validate_slots("About", $$slots, []);
-    	$$self.$capture_state = () => ({ about });
-    	return [];
+    	const click_handler = () => handleClickNavigation(navigation.work);
+
+    	$$self.$set = $$props => {
+    		if ("handleClickNavigation" in $$props) $$invalidate(0, handleClickNavigation = $$props.handleClickNavigation);
+    	};
+
+    	$$self.$capture_state = () => ({ about, navigation, handleClickNavigation });
+
+    	$$self.$inject_state = $$props => {
+    		if ("handleClickNavigation" in $$props) $$invalidate(0, handleClickNavigation = $$props.handleClickNavigation);
+    	};
+
+    	if ($$props && "$$inject" in $$props) {
+    		$$self.$inject_state($$props.$$inject);
+    	}
+
+    	return [handleClickNavigation, click_handler];
     }
 
     class About extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$4, create_fragment$4, safe_not_equal, {});
+    		init(this, options, instance$4, create_fragment$4, safe_not_equal, { handleClickNavigation: 0 });
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -1901,6 +2007,21 @@ var app = (function () {
     			options,
     			id: create_fragment$4.name
     		});
+
+    		const { ctx } = this.$$;
+    		const props = options.props || {};
+
+    		if (/*handleClickNavigation*/ ctx[0] === undefined && !("handleClickNavigation" in props)) {
+    			console.warn("<About> was created without expected prop 'handleClickNavigation'");
+    		}
+    	}
+
+    	get handleClickNavigation() {
+    		throw new Error("<About>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set handleClickNavigation(value) {
+    		throw new Error("<About>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
 
@@ -2116,7 +2237,13 @@ var app = (function () {
     // (39:2) {#if page === navigation.about}
     function create_if_block$1(ctx) {
     	let current;
-    	const about = new About({ $$inline: true });
+
+    	const about = new About({
+    			props: {
+    				handleClickNavigation: /*handleClickNavigation*/ ctx[2]
+    			},
+    			$$inline: true
+    		});
 
     	const block = {
     		c: function create() {
@@ -2126,6 +2253,7 @@ var app = (function () {
     			mount_component(about, target, anchor);
     			current = true;
     		},
+    		p: noop,
     		i: function intro(local) {
     			if (current) return;
     			transition_in(about.$$.fragment, local);
@@ -2224,13 +2352,14 @@ var app = (function () {
     			}
 
     			if (/*page*/ ctx[0] === navigation.about) {
-    				if (!if_block1) {
+    				if (if_block1) {
+    					if_block1.p(ctx, dirty);
+    					transition_in(if_block1, 1);
+    				} else {
     					if_block1 = create_if_block$1(ctx);
     					if_block1.c();
     					transition_in(if_block1, 1);
     					if_block1.m(main, t2);
-    				} else {
-    					transition_in(if_block1, 1);
     				}
     			} else if (if_block1) {
     				group_outros();

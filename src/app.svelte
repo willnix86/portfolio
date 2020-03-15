@@ -37,7 +37,7 @@
     <Portfolio {selectedProject} {handleClickProject} {handleClickNavigation} />
   {/if}
   {#if page === navigation.about}
-    <About />
+    <About {handleClickNavigation} />
   {/if}
   <Footer />
 </main>

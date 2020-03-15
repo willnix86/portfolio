@@ -1,12 +1,31 @@
 <script>
-  import { about } from "../strings.js";
+  import { about, navigation } from "../strings.js";
+  export let handleClickNavigation;
 </script>
 
 <style>
   .about {
     text-align: left;
     max-width: 800px;
+    position: relative;
   }
+
+  .about .back-button {
+    position: absolute;
+    top: -35px;
+    display: flex;
+    align-items: center;
+  }
+
+  .about .back-button p {
+    margin: 0;
+  }
+
+  .about .back-button:hover > svg path:first-of-type,
+  .about .back-button:focus > svg path:first-of-type {
+    fill: #0f0f0f;
+  }
+
   .about div {
     margin-bottom: 80px;
   }
@@ -29,6 +48,21 @@
 </style>
 
 <div class="about">
+  <div
+    class="back-button"
+    on:click={() => handleClickNavigation(navigation.work)}>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      height="24"
+      viewBox="0 0 24 24"
+      width="24">
+      <path
+        d="M21 11H6.83l3.58-3.59L9 6l-6 6 6 6 1.41-1.41L6.83 13H21z"
+        fill="#757575" />
+      <path d="M0 0h24v24H0z" fill="none" />
+    </svg>
+    <button>Back</button>
+  </div>
   <div>
     <p>
       Hello, I'm Will. I'm a Software Developer experienced in building
