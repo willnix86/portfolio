@@ -37,3 +37,9 @@ button:focus {
   color: #0f0f0f;
   outline: none;
 }
+
+@media only screen and (max-width: 767px) {
+  body {
+    padding: 50px 20px;
+  }
+}
