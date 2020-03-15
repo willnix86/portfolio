@@ -6,8 +6,9 @@
 <style>
   .about {
     text-align: left;
-    max-width: 800px;
+    max-width: 1000px;
     position: relative;
+    margin: 0 auto;
   }
 
   .about .back-button {
