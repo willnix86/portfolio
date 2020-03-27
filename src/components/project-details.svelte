@@ -127,15 +127,21 @@
           BACK TO WORK
         </button>
         <div>
-          <button
-            on:click={() => handleClickProject(projects[--projectID % projects.length].title)}>
-            PREV
-          </button>
-          /
-          <button
-            on:click={() => handleClickProject(projects[++projectID % projects.length].title)}>
-            NEXT
-          </button>
+          {#if project.title !== projects[0].title}
+            <button
+              on:click={() => handleClickProject(projects[--projectID % projects.length].title)}>
+              PREV
+            </button>
+          {/if}
+          {#if project.title !== projects[0].title && project.title !== projects[projects.length - 1].title}
+            /
+          {/if}
+          {#if project.title !== projects[projects.length - 1].title}
+            <button
+              on:click={() => handleClickProject(projects[++projectID % projects.length].title)}>
+              NEXT
+            </button>
+          {/if}
         </div>
 
       </div>
