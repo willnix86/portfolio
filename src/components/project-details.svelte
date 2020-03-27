@@ -78,8 +78,18 @@
     margin-top: auto;
     justify-content: space-between;
   }
+  .project-info .button-wrapper {
+    display: flex;
+  }
+  .project-info .button-wrapper p {
+    margin: 0 5px;
+  }
   .project-info button {
     font-size: 12px;
+  }
+  .project-info button.hidden,
+  .project-info p.hidden {
+    visibility: hidden;
   }
   .mobile-image-wrapper {
     padding: 3px 0;
@@ -126,22 +136,21 @@
         <button on:click={() => handleClickNavigation(navigation.work)}>
           BACK TO WORK
         </button>
-        <div>
-          {#if project.title !== projects[0].title}
-            <button
-              on:click={() => handleClickProject(projects[--projectID % projects.length].title)}>
-              PREV
-            </button>
-          {/if}
-          {#if project.title !== projects[0].title && project.title !== projects[projects.length - 1].title}
+        <div class="button-wrapper">
+          <button
+            class={`${project.title !== projects[0].title ? '' : 'hidden'}`}
+            on:click={() => handleClickProject(projects[--projectID % projects.length].title)}>
+            PREV
+          </button>
+          <p
+            class={`${project.title !== projects[0].title && project.title !== projects[projects.length - 1].title ? '' : 'hidden'}`}>
             /
-          {/if}
-          {#if project.title !== projects[projects.length - 1].title}
-            <button
-              on:click={() => handleClickProject(projects[++projectID % projects.length].title)}>
-              NEXT
-            </button>
-          {/if}
+          </p>
+          <button
+            class={`${project.title !== projects[projects.length - 1].title ? '' : 'hidden'}`}
+            on:click={() => handleClickProject(projects[++projectID % projects.length].title)}>
+            NEXT
+          </button>
         </div>
 
       </div>
