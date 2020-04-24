@@ -46,6 +46,12 @@
   .about a:active {
     background: #757575;
   }
+
+  .azure-badge {
+    height: 100px;
+    width: auto;
+    margin-top: 5px;
+  }
 </style>
 
 <div class="about">
@@ -84,6 +90,10 @@
       focusing on iOS and Android development. Lemmi, our flagship application,
       is slated for release in Q3 2020.
     </p>
+    <img
+      class="azure-badge"
+      src={`images/azure-developer-associate.png`}
+      alt="Azure Developer Associate Badge" />
   </div>
   <a href={about.email.url} target="_blank">{about.email.label}</a>
 </div>
