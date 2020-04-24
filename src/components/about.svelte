@@ -73,8 +73,9 @@
   <div>
     <p>
       Hello, I'm Will. I'm a Software Developer experienced in building
-      full-stack and hybrid mobile applications. When I'm not buried in the
-      front-end, I create native apps for Android and iOS.
+      full-stack and hybrid mobile applications. When I'm not buried in the web,
+      I create native apps for Android and iOS. Certified in developing cloud
+      solutions for Microsoft Azure.
     </p>
     <p>
       I currently live in Arlington, Virginia, with my wife and dog, and work
