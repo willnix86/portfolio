@@ -47,7 +47,7 @@
     background: #757575;
   }
 
-  .azure-badge {
+  .certification-badge {
     height: 100px;
     width: auto;
     margin-top: 5px;
@@ -71,11 +71,11 @@
     <button>Back</button>
   </div>
   <div>
+    <p>Hi, I'm Will!</p>
     <p>
-      Hello, I'm Will. I'm a Software Developer experienced in building
-      full-stack and hybrid mobile applications. When I'm not buried in the web,
-      I create native apps for Android and iOS. Certified in developing cloud
-      solutions for Microsoft Azure.
+      I'm a Software Engineer experienced in full-stack and mobile development.
+      Also certified in building cloud-based solutions with Microsoft Azure and
+      AWS.
     </p>
     <p>
       I currently live in Arlington, Virginia, with my wife and dog, and work
@@ -92,9 +92,13 @@
       is slated for release in Q3 2020.
     </p>
     <img
-      class="azure-badge"
+      class="certification-badge"
       src={`images/azure-developer-associate.png`}
       alt="Azure Developer Associate Badge" />
+    <img
+      class="certification-badge"
+      src={`images/aws-developer-associate.png`}
+      alt="AWS Developer Associate Badge" />
   </div>
   <a href={about.email.url} target="_blank">{about.email.label}</a>
 </div>
