@@ -470,7 +470,7 @@ var app = (function () {
     const links = {
       twitter: { label: "TWITTER", url: "https://twitter.com/willnix86" },
       linkedin: { label: "LINKEDIN", url: "https://www.linkedin.com/in/willnixon1" },
-      instagram: { label: "INSTAGRAM", url: "https://www.instagram.com/willnix86" }
+      github: { label: "GITHUB", url: "https://github.com/willnix86" }
     };
 
     const about = {
