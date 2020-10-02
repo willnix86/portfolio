@@ -1,6 +1,6 @@
 export const navigation = {
+  about: "ABOUT",
   work: "WORK",
-  about: "ABOUT / CONTACT"
 }
 
 export const projects = [

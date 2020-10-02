@@ -5,15 +5,15 @@
   import Footer from "./components/footer.svelte";
   import { navigation } from "./strings.js";
 
-  let page = navigation.work;
+  let page = navigation.about;
   let selectedProject;
 
-  let handleClickNavigation = selected => {
+  let handleClickNavigation = (selected) => {
     page = selected;
     selectedProject = null;
   };
 
-  let handleClickProject = selected => {
+  let handleClickProject = (selected) => {
     selectedProject = selected;
   };
 
