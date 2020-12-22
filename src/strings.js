@@ -6,7 +6,7 @@ export const navigation = {
 export const projects = [
   {
     title: "Lemmi",
-    description: "An Android and iOS app that helps people with speech difficulties communicate with ease, and re-connect with others. Initially developed for the web, then converted to a hybrid application using Apache Cordova, I ported Lemmi to native SDKs to improve performance and make use of APIs not accessible otherwise. (Launching Q3 2020)",
+    description: "An assistive text-to-speech (AAC) app for Android and iOS that gives users the independence to fully take part in conversations, and to share their thoughts and needs clearly with others. Initially developed for the web, then converted to a hybrid application using Apache Cordova, I ported Lemmi to native SDKs to improve performance and make use of APIs not accessible otherwise.",
     webImage: "lemmi-web",
     mobileImage: "lemmi-mobile",
     tools: {
