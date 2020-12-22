@@ -56,10 +56,10 @@
       decide to reach out!
     </p>
     <p>
-      Outside of my day-to-day, I am the developer and co-founder of Jenix
-      Technologies LTD - a software development company focused on iOS and
-      Android development. Lemmi, our flagship application, is slated for
-      release in Q4 2020.
+      Outside of my day-to-day, I am the tech lead, and co-founder, of Jenix
+      Technologies LTD - a software development company building iOS and
+      Android applications. Lemmi, our flagship app, is slated for
+      release in January 2021.
     </p>
     <img
       class="certification-badge"
