@@ -14,7 +14,7 @@
     width: 100%;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
   }
 
   .portfolio .back-button {
@@ -35,7 +35,7 @@
 
   @media only screen and (max-width: 920px) {
     .portfolio {
-      flex-direction: column;
+      flex-direction: column-reverse;
     }
   }
 </style>
@@ -62,7 +62,7 @@
       {handleClickProject}
       {handleClickNavigation} />
   {:else}
-    {#each projects as { title, webImage }, index}
+    {#each projects.reverse() as { title, webImage }, index}
       <ProjectImage {title} image={webImage} {handleClickProject} />
     {/each}
   {/if}

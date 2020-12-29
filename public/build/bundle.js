@@ -404,7 +404,7 @@ var app = (function () {
     const projects = [
       {
         title: "Lemmi",
-        description: "An Android and iOS app that helps people with speech difficulties communicate with ease, and re-connect with others. Initially developed for the web, then converted to a hybrid application using Apache Cordova, I ported Lemmi to native SDKs to improve performance and make use of APIs not accessible otherwise. (Launching Q3 2020)",
+        description: "An assistive text-to-speech (AAC) app for Android and iOS that gives users the independence to fully take part in conversations, and to share their thoughts and needs clearly with others. Initially developed for the web, then converted to a hybrid application using Apache Cordova, I ported Lemmi to native SDKs to improve performance and make use of APIs not accessible otherwise.",
         webImage: "lemmi-web",
         mobileImage: "lemmi-mobile",
         tools: {
@@ -433,6 +433,19 @@ var app = (function () {
           "App Store": "https://apps.apple.com/us/app/get-your-beerings/id1484223930?ls=1",
           "Repo (web)": "https://github.com/willnix86/get-your-beerings",
           "Repo (mobile)": "https://github.com/willnix86/beerings-ios-public"
+        }
+      },
+      {
+        title: "Jenix Tech LTD",
+        description: "Website for Jenix Technologies LTD - a software development company building mobile and full-stack applications. I chose to use Svelte and Tailwind CSS to ensure the fastest, highest-quality development cycle that resulted in the smallest possible build package.",
+        webImage: "jenix-web",
+        mobileImage: "jenix-mobile",
+        tools: {
+          "Front-End": ["Svelte", "Tailwind", "Rollup"]
+        },
+        links: {
+          "Website": "https://www.jenixtech.com",
+          "Repo (web)": "https://github.com/willnix86/jenix"
         }
       },
       {
@@ -1509,7 +1522,7 @@ var app = (function () {
     function create_else_block(ctx) {
     	let each_1_anchor;
     	let current;
-    	let each_value = projects;
+    	let each_value = projects.reverse();
     	validate_each_argument(each_value);
     	let each_blocks = [];
 
@@ -1539,7 +1552,7 @@ var app = (function () {
     		},
     		p: function update(ctx, dirty) {
     			if (dirty & /*projects, handleClickProject*/ 2) {
-    				each_value = projects;
+    				each_value = projects.reverse();
     				validate_each_argument(each_value);
     				let i;
 
@@ -1637,21 +1650,21 @@ var app = (function () {
     			create_component(projectdetails.$$.fragment);
     			attr_dev(path0, "d", "M21 11H6.83l3.58-3.59L9 6l-6 6 6 6 1.41-1.41L6.83 13H21z");
     			attr_dev(path0, "fill", "#757575");
-    			attr_dev(path0, "class", "svelte-14gq9ad");
-    			add_location(path0, file$3, 52, 8, 1120);
+    			attr_dev(path0, "class", "svelte-1basj81");
+    			add_location(path0, file$3, 52, 8, 1136);
     			attr_dev(path1, "d", "M0 0h24v24H0z");
     			attr_dev(path1, "fill", "none");
-    			attr_dev(path1, "class", "svelte-14gq9ad");
-    			add_location(path1, file$3, 55, 8, 1233);
+    			attr_dev(path1, "class", "svelte-1basj81");
+    			add_location(path1, file$3, 55, 8, 1249);
     			attr_dev(svg, "xmlns", "http://www.w3.org/2000/svg");
     			attr_dev(svg, "height", "24");
     			attr_dev(svg, "viewBox", "0 0 24 24");
     			attr_dev(svg, "width", "24");
-    			add_location(svg, file$3, 47, 6, 996);
-    			attr_dev(p, "class", "svelte-14gq9ad");
-    			add_location(p, file$3, 57, 6, 1291);
-    			attr_dev(button, "class", "back-button svelte-14gq9ad");
-    			add_location(button, file$3, 44, 4, 893);
+    			add_location(svg, file$3, 47, 6, 1012);
+    			attr_dev(p, "class", "svelte-1basj81");
+    			add_location(p, file$3, 57, 6, 1307);
+    			attr_dev(button, "class", "back-button svelte-1basj81");
+    			add_location(button, file$3, 44, 4, 909);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, button, anchor);
@@ -1705,7 +1718,7 @@ var app = (function () {
     	return block;
     }
 
-    // (65:4) {#each projects as { title, webImage }
+    // (65:4) {#each projects.reverse() as { title, webImage }
     function create_each_block$2(ctx) {
     	let projectimage;
     	let current;
@@ -1750,7 +1763,7 @@ var app = (function () {
     		block,
     		id: create_each_block$2.name,
     		type: "each",
-    		source: "(65:4) {#each projects as { title, webImage }",
+    		source: "(65:4) {#each projects.reverse() as { title, webImage }",
     		ctx
     	});
 
@@ -1777,8 +1790,8 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			if_block.c();
-    			attr_dev(div, "class", "portfolio svelte-14gq9ad");
-    			add_location(div, file$3, 42, 0, 841);
+    			attr_dev(div, "class", "portfolio svelte-1basj81");
+    			add_location(div, file$3, 42, 0, 857);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1984,7 +1997,7 @@ var app = (function () {
     			p3.textContent = "Since joining the Blue Raster team, my work has been demoed in front of\n      thousands of users at Esri's User Conference 2019, I've developed Azure\n      solutions for nationally recognized companies, and solved 2 year old\n      problems for one of our longest-standing clients. I may not be able to\n      mention them here, but I'm not aversed to a name-drop or two should you\n      decide to reach out!";
     			t7 = space();
     			p4 = element("p");
-    			p4.textContent = "Outside of my day-to-day, I am the developer and co-founder of Jenix\n      Technologies LTD - a software development company focused on iOS and\n      Android development. Lemmi, our flagship application, is slated for\n      release in Q4 2020.";
+    			p4.textContent = "Outside of my day-to-day, I am the tech lead, and co-founder, of Jenix\n      Technologies LTD - a software development company building iOS and\n      Android applications. Lemmi, our flagship app, is slated for\n      release in January 2021.";
     			t9 = space();
     			img0 = element("img");
     			t10 = space();
@@ -2005,17 +2018,17 @@ var app = (function () {
     			attr_dev(img0, "class", "certification-badge svelte-szzqr3");
     			if (img0.src !== (img0_src_value = `images/azure-developer-associate.png`)) attr_dev(img0, "src", img0_src_value);
     			attr_dev(img0, "alt", "Azure Developer Associate Badge");
-    			add_location(img0, file$4, 63, 4, 1683);
+    			add_location(img0, file$4, 63, 4, 1681);
     			attr_dev(img1, "class", "certification-badge svelte-szzqr3");
     			if (img1.src !== (img1_src_value = `images/aws-developer-associate.png`)) attr_dev(img1, "src", img1_src_value);
     			attr_dev(img1, "alt", "AWS Developer Associate Badge");
-    			add_location(img1, file$4, 67, 4, 1824);
+    			add_location(img1, file$4, 67, 4, 1822);
     			attr_dev(div0, "class", "svelte-szzqr3");
     			add_location(div0, file$4, 39, 2, 621);
     			attr_dev(a, "href", a_href_value = about.email.url);
     			attr_dev(a, "target", "_blank");
     			attr_dev(a, "class", "svelte-szzqr3");
-    			add_location(a, file$4, 72, 2, 1968);
+    			add_location(a, file$4, 72, 2, 1966);
     			attr_dev(div1, "class", "about svelte-szzqr3");
     			add_location(div1, file$4, 38, 0, 599);
     		},

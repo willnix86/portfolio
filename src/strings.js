@@ -38,6 +38,19 @@ export const projects = [
     }
   },
   {
+    title: "Jenix Tech LTD",
+    description: "Website for Jenix Technologies LTD - a software development company building mobile and full-stack applications. I chose to use Svelte and Tailwind CSS to ensure the fastest, highest-quality development cycle that resulted in the smallest possible build package.",
+    webImage: "jenix-web",
+    mobileImage: "jenix-mobile",
+    tools: {
+      "Front-End": ["Svelte", "Tailwind", "Rollup"]
+    },
+    links: {
+      "Website": "https://www.jenixtech.com",
+      "Repo (web)": "https://github.com/willnix86/jenix"
+    }
+  },
+  {
     title: "English Rules",
     description: "A web-app for teachers, and students aged 8-10, to aid the learning of English grammar. Teachers can customize a variety of exercises to better match the content of their curriculum.",
     webImage: "english-web",
