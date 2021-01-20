@@ -16,7 +16,9 @@
     font-size: 20px;
     margin-bottom: 10px;
   }
-  .about a {
+
+
+  .contact-link {
     background: #0f0f0f;
     color: white;
     padding: 10px 30px;
@@ -24,9 +26,21 @@
     font-weight: 100;
     transition: all 150ms;
   }
-  .about a:hover,
-  .about a:active {
+  .contact-link:hover,
+  .contact-link:active {
     background: #757575;
+  }
+
+  .about-link {
+    font-size: 20px;
+    color: #757575;
+    text-decoration: underline;
+    text-decoration-color: #757575;
+  }
+
+  .about-link:hover {
+    text-decoration-color: #0f0f0f;
+    color: #0f0f0f;
   }
 
   .certification-badge {
@@ -58,8 +72,7 @@
     <p>
       Outside of my day-to-day, I am the tech lead, and co-founder, of Jenix
       Technologies LTD - a software development company building iOS and
-      Android applications. Lemmi, our flagship app, is slated for
-      release in January 2021.
+      Android applications. <a class="about-link" href="https://www.lemmichat.com" target="_default">Lemmi</a>, our flagship app, is now available on both platforms.
     </p>
     <img
       class="certification-badge"
@@ -70,5 +83,5 @@
       src={`images/aws-developer-associate.png`}
       alt="AWS Developer Associate Badge" />
   </div>
-  <a href={about.email.url} target="_blank">{about.email.label}</a>
+  <a class="contact-link" href={about.email.url} target="_blank">{about.email.label}</a>
 </div>

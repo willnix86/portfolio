@@ -3,6 +3,8 @@
   import ProjectDetails from "./project-details.svelte";
   import { projects, navigation } from "../strings.js";
 
+  console.log(projects)
+
   export let selectedProject;
   export let handleClickProject;
   export let handleClickNavigation;
