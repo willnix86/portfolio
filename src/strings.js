@@ -80,7 +80,7 @@ export const projects = [
       "Repo": "https://github.com/willnix86/ppl"
     }
   },
-];
+].reverse();
 
 export const links = {
   twitter: { label: "TWITTER", url: "https://twitter.com/willnix86" },

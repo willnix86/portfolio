@@ -3,8 +3,6 @@
   import ProjectDetails from "./project-details.svelte";
   import { projects, navigation } from "../strings.js";
 
-  console.log(projects)
-
   export let selectedProject;
   export let handleClickProject;
   export let handleClickNavigation;
@@ -64,7 +62,7 @@
       {handleClickProject}
       {handleClickNavigation} />
   {:else}
-    {#each projects.reverse() as { title, webImage }, index}
+    {#each projects as { title, webImage }, index}
       <ProjectImage {title} image={webImage} {handleClickProject} />
     {/each}
   {/if}

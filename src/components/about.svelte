@@ -57,7 +57,7 @@
       I'm a Software Engineer experienced in full-stack and mobile development.
     </p>
     <p>
-      I currently live in Chicago, Illinois, with my wife and dog, and work for
+      I live in Chicago with my wife and dog, and work for
       Blue Raster utilizing Esri's ArcGIS technology to build solutions for
       non-profit, government, and commercial organizations.
     </p>
