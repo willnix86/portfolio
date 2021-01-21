@@ -21,7 +21,7 @@ export const projects = [
   },
   {
     title: "Get Your Beerings",
-    description: "An app to find pubs, breweries, and beer-gardens nearby on in a place the user plans to visit. Get Your Beering began as a Progressive Web App before being developed for iOS.",
+    description: "An app to find pubs, breweries, and beer-gardens nearby on in an area the user plans to visit. Get Your Beering began as a Progressive Web App before being developed for iOS.",
     webImage: "beerings-web",
     mobileImage: "beerings-mobile",
     iosLink: "https://apps.apple.com/us/app/get-your-beerings/id1484223930?ls=1",
