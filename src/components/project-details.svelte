@@ -5,15 +5,88 @@
   export let handleClickProject;
   export let selectedProject;
   let project = projects.find(
-    p => p.title.toLowerCase() === selectedProject.toLowerCase()
+    (p) => p.title.toLowerCase() === selectedProject.toLowerCase()
   );
   let projectID = projects.indexOf(project);
   beforeUpdate(() => {
     project = projects.find(
-      p => p.title.toLowerCase() === selectedProject.toLowerCase()
+      (p) => p.title.toLowerCase() === selectedProject.toLowerCase()
     );
   });
 </script>
+
+<div class="project-details-wrapper">
+  <img
+    class="project-image"
+    src={`images/${project.webImage}.png`}
+    alt={`${project.title} website image`}
+  />
+  <div class="project-details">
+    <div class="project-info">
+      <h2 class="title">{project.title.toUpperCase()}</h2>
+      <p class="description">{project.description}</p>
+      <div class="tech-stack">
+        <h3 class="sub-title">TECHNOLOGIES:</h3>
+        {#each Object.keys(project.tools) as tool}
+          <p class="tools">
+            <b>{tool}</b>
+            :
+            <span>{project.tools[tool].join(", ")}</span>
+          </p>
+        {/each}
+      </div>
+      <div class="links">
+        {#each Object.keys(project.links) as link}
+          <a href={project.links[link]} target="_blank">{link}</a>
+        {/each}
+      </div>
+      <div class="navigation">
+        <button on:click={() => handleClickNavigation(navigation.work)}>
+          BACK TO WORK
+        </button>
+        <div class="button-wrapper">
+          <button
+            class={`${project.title !== projects[0].title ? "" : "hidden"}`}
+            on:click={() =>
+              handleClickProject(projects[--projectID % projects.length].title)}
+          >
+            PREV
+          </button>
+          <p
+            class={`${
+              project.title !== projects[0].title &&
+              project.title !== projects[projects.length - 1].title
+                ? ""
+                : "hidden"
+            }`}
+          >
+            /
+          </p>
+          <button
+            class={`${
+              project.title !== projects[projects.length - 1].title
+                ? ""
+                : "hidden"
+            }`}
+            on:click={() =>
+              handleClickProject(projects[++projectID % projects.length].title)}
+          >
+            NEXT
+          </button>
+        </div>
+      </div>
+    </div>
+    {#if project.mobileImage}
+      <div class="mobile-image-wrapper">
+        <img
+          class="project-mobile-image"
+          src={`images/${project.mobileImage}.png`}
+          alt={`${project.title} mobile image`}
+        />
+      </div>
+    {/if}
+  </div>
+</div>
 
 <style>
   .project-details-wrapper {
@@ -107,59 +180,3 @@
     }
   }
 </style>
-
-<div class="project-details-wrapper">
-  <img
-    class="project-image"
-    src={`images/${project.webImage}.png`}
-    alt={`${project.title} website image`} />
-  <div class="project-details">
-    <div class="project-info">
-      <h2 class="title">{project.title.toUpperCase()}</h2>
-      <p class="description">{project.description}</p>
-      <div class="tech-stack">
-        <h3 class="sub-title">TECHNOLOGIES:</h3>
-        {#each Object.keys(project.tools) as tool}
-          <p class="tools">
-            <b>{tool}</b>
-            :
-            <span>{project.tools[tool].join(', ')}</span>
-          </p>
-        {/each}
-      </div>
-      <div class="links">
-        {#each Object.keys(project.links) as link}
-          <a href={project.links[link]} target="_blank">{link}</a>
-        {/each}
-      </div>
-      <div class="navigation">
-        <button on:click={() => handleClickNavigation(navigation.work)}>
-          BACK TO WORK
-        </button>
-        <div class="button-wrapper">
-          <button
-            class={`${project.title !== projects[0].title ? '' : 'hidden'}`}
-            on:click={() => handleClickProject(projects[--projectID % projects.length].title)}>
-            PREV
-          </button>
-          <p
-            class={`${project.title !== projects[0].title && project.title !== projects[projects.length - 1].title ? '' : 'hidden'}`}>
-            /
-          </p>
-          <button
-            class={`${project.title !== projects[projects.length - 1].title ? '' : 'hidden'}`}
-            on:click={() => handleClickProject(projects[++projectID % projects.length].title)}>
-            NEXT
-          </button>
-        </div>
-
-      </div>
-    </div>
-    <div class="mobile-image-wrapper">
-      <img
-        class="project-mobile-image"
-        src={`images/${project.mobileImage}.png`}
-        alt={`${project.title} mobile image`} />
-    </div>
-  </div>
-</div>

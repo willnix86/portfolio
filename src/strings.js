@@ -5,6 +5,21 @@ export const navigation = {
 
 export const projects = [
   {
+    title: "ENdi",
+    description: "A journaling app for women who suffer from Endometriosis. (Currently in development)",
+    webImage: "endi-web",
+    // mobileImage: "lemmi-mobile",
+    tools: {
+      "Mobile": ["Swift", "Kotlin"],
+      "Front-End": ["TypeScript", "React", "Next.js", "ChakraUI"],
+      "Testing": ["XCTAssert"]
+    },
+    links: {
+      "Website": "https://www.myendiapp.com",
+      "Repo (web)": "https://github.com/JenixTech/endi-web"
+    }
+  },
+  {
     title: "Lemmi",
     description: "An assistive text-to-speech (AAC) app for Android and iOS that gives users the independence to fully take part in conversations, and to share their thoughts and needs clearly with others. Initially developed for the web, then converted to a hybrid application using Apache Cordova, I ported Lemmi to native SDKs to improve performance and make use of APIs not accessible otherwise.",
     webImage: "lemmi-web",

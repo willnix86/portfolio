@@ -5,7 +5,7 @@
   import Footer from "./components/footer.svelte";
   import { navigation } from "./strings.js";
 
-  let page = navigation.about;
+  let page = navigation.work;
   let selectedProject;
 
   let handleClickNavigation = (selected) => {
@@ -23,14 +23,6 @@
   };
 </script>
 
-<style>
-  main {
-    max-width: 1300px;
-    margin: 0 auto;
-    text-align: center;
-  }
-</style>
-
 <main>
   <Header {page} {handleClickNavigation} {handleClickHome} />
   {#if page === navigation.work}
@@ -41,3 +33,11 @@
   {/if}
   <Footer />
 </main>
+
+<style>
+  main {
+    max-width: 1300px;
+    margin: 0 auto;
+    text-align: center;
+  }
+</style>

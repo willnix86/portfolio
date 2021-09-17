@@ -403,6 +403,21 @@ var app = (function () {
 
     const projects = [
       {
+        title: "ENdi",
+        description: "A journaling app for women who suffer from Endometriosis. (Currently in development)",
+        webImage: "endi-web",
+        // mobileImage: "lemmi-mobile",
+        tools: {
+          "Mobile": ["Swift", "Kotlin"],
+          "Front-End": ["TypeScript", "React", "Next.js", "ChakraUI"],
+          "Testing": ["XCTAssert"]
+        },
+        links: {
+          "Website": "https://www.myendiapp.com",
+          "Repo (web)": "https://github.com/JenixTech/endi-web"
+        }
+      },
+      {
         title: "Lemmi",
         description: "An assistive text-to-speech (AAC) app for Android and iOS that gives users the independence to fully take part in conversations, and to share their thoughts and needs clearly with others. Initially developed for the web, then converted to a hybrid application using Apache Cordova, I ported Lemmi to native SDKs to improve performance and make use of APIs not accessible otherwise.",
         webImage: "lemmi-web",
@@ -964,7 +979,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (122:8) {#each Object.keys(project.tools) as tool}
+    // (30:8) {#each Object.keys(project.tools) as tool}
     function create_each_block_1(ctx) {
     	let p;
     	let b;
@@ -985,11 +1000,11 @@ var app = (function () {
     			span = element("span");
     			t2 = text(t2_value);
     			t3 = space();
-    			add_location(b, file$2, 123, 12, 2652);
+    			add_location(b, file$2, 31, 12, 1008);
     			attr_dev(span, "class", "svelte-1d3mcw8");
-    			add_location(span, file$2, 125, 12, 2692);
+    			add_location(span, file$2, 33, 12, 1048);
     			attr_dev(p, "class", "tools svelte-1d3mcw8");
-    			add_location(p, file$2, 122, 10, 2622);
+    			add_location(p, file$2, 30, 10, 978);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -1013,14 +1028,14 @@ var app = (function () {
     		block,
     		id: create_each_block_1.name,
     		type: "each",
-    		source: "(122:8) {#each Object.keys(project.tools) as tool}",
+    		source: "(30:8) {#each Object.keys(project.tools) as tool}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (131:8) {#each Object.keys(project.links) as link}
+    // (39:8) {#each Object.keys(project.links) as link}
     function create_each_block$1(ctx) {
     	let a;
     	let t_value = /*link*/ ctx[8] + "";
@@ -1034,7 +1049,7 @@ var app = (function () {
     			attr_dev(a, "href", a_href_value = /*project*/ ctx[2].links[/*link*/ ctx[8]]);
     			attr_dev(a, "target", "_blank");
     			attr_dev(a, "class", "svelte-1d3mcw8");
-    			add_location(a, file$2, 131, 10, 2869);
+    			add_location(a, file$2, 39, 10, 1225);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, a, anchor);
@@ -1056,7 +1071,54 @@ var app = (function () {
     		block,
     		id: create_each_block$1.name,
     		type: "each",
-    		source: "(131:8) {#each Object.keys(project.links) as link}",
+    		source: "(39:8) {#each Object.keys(project.links) as link}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (79:4) {#if project.mobileImage}
+    function create_if_block(ctx) {
+    	let div;
+    	let img;
+    	let img_src_value;
+    	let img_alt_value;
+
+    	const block = {
+    		c: function create() {
+    			div = element("div");
+    			img = element("img");
+    			attr_dev(img, "class", "project-mobile-image svelte-1d3mcw8");
+    			if (img.src !== (img_src_value = `images/${/*project*/ ctx[2].mobileImage}.png`)) attr_dev(img, "src", img_src_value);
+    			attr_dev(img, "alt", img_alt_value = `${/*project*/ ctx[2].title} mobile image`);
+    			add_location(img, file$2, 80, 8, 2457);
+    			attr_dev(div, "class", "mobile-image-wrapper svelte-1d3mcw8");
+    			add_location(div, file$2, 79, 6, 2414);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div, anchor);
+    			append_dev(div, img);
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*project*/ 4 && img.src !== (img_src_value = `images/${/*project*/ ctx[2].mobileImage}.png`)) {
+    				attr_dev(img, "src", img_src_value);
+    			}
+
+    			if (dirty & /*project*/ 4 && img_alt_value !== (img_alt_value = `${/*project*/ ctx[2].title} mobile image`)) {
+    				attr_dev(img, "alt", img_alt_value);
+    			}
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(div);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block.name,
+    		type: "if",
+    		source: "(79:4) {#if project.mobileImage}",
     		ctx
     	});
 
@@ -1064,12 +1126,12 @@ var app = (function () {
     }
 
     function create_fragment$2(ctx) {
-    	let div7;
-    	let img0;
-    	let img0_src_value;
-    	let img0_alt_value;
-    	let t0;
     	let div6;
+    	let img;
+    	let img_src_value;
+    	let img_alt_value;
+    	let t0;
+    	let div5;
     	let div4;
     	let h2;
     	let t1_value = /*project*/ ctx[2].title.toUpperCase() + "";
@@ -1101,10 +1163,6 @@ var app = (function () {
     	let t15;
     	let button2_class_value;
     	let t16;
-    	let div5;
-    	let img1;
-    	let img1_src_value;
-    	let img1_alt_value;
     	let mounted;
     	let dispose;
     	let each_value_1 = Object.keys(/*project*/ ctx[2].tools);
@@ -1123,12 +1181,14 @@ var app = (function () {
     		each_blocks[i] = create_each_block$1(get_each_context$1(ctx, each_value, i));
     	}
 
+    	let if_block = /*project*/ ctx[2].mobileImage && create_if_block(ctx);
+
     	const block = {
     		c: function create() {
-    			div7 = element("div");
-    			img0 = element("img");
-    			t0 = space();
     			div6 = element("div");
+    			img = element("img");
+    			t0 = space();
+    			div5 = element("div");
     			div4 = element("div");
     			h2 = element("h2");
     			t1 = text(t1_value);
@@ -1167,68 +1227,61 @@ var app = (function () {
     			button2 = element("button");
     			t15 = text("NEXT");
     			t16 = space();
-    			div5 = element("div");
-    			img1 = element("img");
-    			attr_dev(img0, "class", "project-image svelte-1d3mcw8");
-    			if (img0.src !== (img0_src_value = `images/${/*project*/ ctx[2].webImage}.png`)) attr_dev(img0, "src", img0_src_value);
-    			attr_dev(img0, "alt", img0_alt_value = `${/*project*/ ctx[2].title} website image`);
-    			add_location(img0, file$2, 111, 2, 2184);
+    			if (if_block) if_block.c();
+    			attr_dev(img, "class", "project-image svelte-1d3mcw8");
+    			if (img.src !== (img_src_value = `images/${/*project*/ ctx[2].webImage}.png`)) attr_dev(img, "src", img_src_value);
+    			attr_dev(img, "alt", img_alt_value = `${/*project*/ ctx[2].title} website image`);
+    			add_location(img, file$2, 18, 2, 538);
     			attr_dev(h2, "class", "title svelte-1d3mcw8");
-    			add_location(h2, file$2, 117, 6, 2373);
+    			add_location(h2, file$2, 25, 6, 729);
     			attr_dev(p0, "class", "description svelte-1d3mcw8");
-    			add_location(p0, file$2, 118, 6, 2432);
+    			add_location(p0, file$2, 26, 6, 788);
     			attr_dev(h3, "class", "sub-title svelte-1d3mcw8");
-    			add_location(h3, file$2, 120, 8, 2520);
+    			add_location(h3, file$2, 28, 8, 876);
     			attr_dev(div0, "class", "tech-stack svelte-1d3mcw8");
-    			add_location(div0, file$2, 119, 6, 2487);
+    			add_location(div0, file$2, 27, 6, 843);
     			attr_dev(div1, "class", "links svelte-1d3mcw8");
-    			add_location(div1, file$2, 129, 6, 2788);
+    			add_location(div1, file$2, 37, 6, 1144);
     			attr_dev(button0, "class", "svelte-1d3mcw8");
-    			add_location(button0, file$2, 135, 8, 2994);
+    			add_location(button0, file$2, 43, 8, 1350);
 
     			attr_dev(button1, "class", button1_class_value = "" + (null_to_empty(`${/*project*/ ctx[2].title !== projects[0].title
 			? ""
 			: "hidden"}`) + " svelte-1d3mcw8"));
 
-    			add_location(button1, file$2, 139, 10, 3147);
+    			add_location(button1, file$2, 47, 10, 1503);
 
     			attr_dev(p1, "class", p1_class_value = "" + (null_to_empty(`${/*project*/ ctx[2].title !== projects[0].title && /*project*/ ctx[2].title !== projects[projects.length - 1].title
 			? ""
 			: "hidden"}`) + " svelte-1d3mcw8"));
 
-    			add_location(p1, file$2, 144, 10, 3375);
+    			add_location(p1, file$2, 54, 10, 1756);
 
     			attr_dev(button2, "class", button2_class_value = "" + (null_to_empty(`${/*project*/ ctx[2].title !== projects[projects.length - 1].title
 			? ""
 			: "hidden"}`) + " svelte-1d3mcw8"));
 
-    			add_location(button2, file$2, 148, 10, 3552);
+    			add_location(button2, file$2, 64, 10, 2018);
     			attr_dev(div2, "class", "button-wrapper svelte-1d3mcw8");
-    			add_location(div2, file$2, 138, 8, 3108);
+    			add_location(div2, file$2, 46, 8, 1464);
     			attr_dev(div3, "class", "navigation svelte-1d3mcw8");
-    			add_location(div3, file$2, 134, 6, 2961);
+    			add_location(div3, file$2, 42, 6, 1317);
     			attr_dev(div4, "class", "project-info svelte-1d3mcw8");
-    			add_location(div4, file$2, 116, 4, 2340);
-    			attr_dev(img1, "class", "project-mobile-image svelte-1d3mcw8");
-    			if (img1.src !== (img1_src_value = `images/${/*project*/ ctx[2].mobileImage}.png`)) attr_dev(img1, "src", img1_src_value);
-    			attr_dev(img1, "alt", img1_alt_value = `${/*project*/ ctx[2].title} mobile image`);
-    			add_location(img1, file$2, 158, 6, 3873);
-    			attr_dev(div5, "class", "mobile-image-wrapper svelte-1d3mcw8");
-    			add_location(div5, file$2, 157, 4, 3832);
-    			attr_dev(div6, "class", "project-details svelte-1d3mcw8");
-    			add_location(div6, file$2, 115, 2, 2306);
-    			attr_dev(div7, "class", "project-details-wrapper svelte-1d3mcw8");
-    			add_location(div7, file$2, 110, 0, 2144);
+    			add_location(div4, file$2, 24, 4, 696);
+    			attr_dev(div5, "class", "project-details svelte-1d3mcw8");
+    			add_location(div5, file$2, 23, 2, 662);
+    			attr_dev(div6, "class", "project-details-wrapper svelte-1d3mcw8");
+    			add_location(div6, file$2, 17, 0, 498);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div7, anchor);
-    			append_dev(div7, img0);
-    			append_dev(div7, t0);
-    			append_dev(div7, div6);
-    			append_dev(div6, div4);
+    			insert_dev(target, div6, anchor);
+    			append_dev(div6, img);
+    			append_dev(div6, t0);
+    			append_dev(div6, div5);
+    			append_dev(div5, div4);
     			append_dev(div4, h2);
     			append_dev(h2, t1);
     			append_dev(div4, t2);
@@ -1263,9 +1316,8 @@ var app = (function () {
     			append_dev(div2, t14);
     			append_dev(div2, button2);
     			append_dev(button2, t15);
-    			append_dev(div6, t16);
-    			append_dev(div6, div5);
-    			append_dev(div5, img1);
+    			append_dev(div5, t16);
+    			if (if_block) if_block.m(div5, null);
 
     			if (!mounted) {
     				dispose = [
@@ -1278,12 +1330,12 @@ var app = (function () {
     			}
     		},
     		p: function update(ctx, [dirty]) {
-    			if (dirty & /*project*/ 4 && img0.src !== (img0_src_value = `images/${/*project*/ ctx[2].webImage}.png`)) {
-    				attr_dev(img0, "src", img0_src_value);
+    			if (dirty & /*project*/ 4 && img.src !== (img_src_value = `images/${/*project*/ ctx[2].webImage}.png`)) {
+    				attr_dev(img, "src", img_src_value);
     			}
 
-    			if (dirty & /*project*/ 4 && img0_alt_value !== (img0_alt_value = `${/*project*/ ctx[2].title} website image`)) {
-    				attr_dev(img0, "alt", img0_alt_value);
+    			if (dirty & /*project*/ 4 && img_alt_value !== (img_alt_value = `${/*project*/ ctx[2].title} website image`)) {
+    				attr_dev(img, "alt", img_alt_value);
     			}
 
     			if (dirty & /*project*/ 4 && t1_value !== (t1_value = /*project*/ ctx[2].title.toUpperCase() + "")) set_data_dev(t1, t1_value);
@@ -1355,20 +1407,26 @@ var app = (function () {
     				attr_dev(button2, "class", button2_class_value);
     			}
 
-    			if (dirty & /*project*/ 4 && img1.src !== (img1_src_value = `images/${/*project*/ ctx[2].mobileImage}.png`)) {
-    				attr_dev(img1, "src", img1_src_value);
-    			}
-
-    			if (dirty & /*project*/ 4 && img1_alt_value !== (img1_alt_value = `${/*project*/ ctx[2].title} mobile image`)) {
-    				attr_dev(img1, "alt", img1_alt_value);
+    			if (/*project*/ ctx[2].mobileImage) {
+    				if (if_block) {
+    					if_block.p(ctx, dirty);
+    				} else {
+    					if_block = create_if_block(ctx);
+    					if_block.c();
+    					if_block.m(div5, null);
+    				}
+    			} else if (if_block) {
+    				if_block.d(1);
+    				if_block = null;
     			}
     		},
     		i: noop,
     		o: noop,
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div7);
+    			if (detaching) detach_dev(div6);
     			destroy_each(each_blocks_1, detaching);
     			destroy_each(each_blocks, detaching);
+    			if (if_block) if_block.d();
     			mounted = false;
     			run_all(dispose);
     		}
@@ -1615,7 +1673,7 @@ var app = (function () {
     }
 
     // (44:2) {#if selectedProject}
-    function create_if_block(ctx) {
+    function create_if_block$1(ctx) {
     	let button;
     	let svg;
     	let path0;
@@ -1709,7 +1767,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block.name,
+    		id: create_if_block$1.name,
     		type: "if",
     		source: "(44:2) {#if selectedProject}",
     		ctx
@@ -1775,7 +1833,7 @@ var app = (function () {
     	let current_block_type_index;
     	let if_block;
     	let current;
-    	const if_block_creators = [create_if_block, create_else_block];
+    	const if_block_creators = [create_if_block$1, create_else_block];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
@@ -2272,7 +2330,7 @@ var app = (function () {
     /* src/app.svelte generated by Svelte v3.29.0 */
     const file$6 = "src/app.svelte";
 
-    // (36:2) {#if page === navigation.work}
+    // (28:2) {#if page === navigation.work}
     function create_if_block_1(ctx) {
     	let portfolio;
     	let current;
@@ -2317,15 +2375,15 @@ var app = (function () {
     		block,
     		id: create_if_block_1.name,
     		type: "if",
-    		source: "(36:2) {#if page === navigation.work}",
+    		source: "(28:2) {#if page === navigation.work}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (39:2) {#if page === navigation.about}
-    function create_if_block$1(ctx) {
+    // (31:2) {#if page === navigation.about}
+    function create_if_block$2(ctx) {
     	let about;
     	let current;
 
@@ -2361,9 +2419,9 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$1.name,
+    		id: create_if_block$2.name,
     		type: "if",
-    		source: "(39:2) {#if page === navigation.about}",
+    		source: "(31:2) {#if page === navigation.about}",
     		ctx
     	});
 
@@ -2389,7 +2447,7 @@ var app = (function () {
     		});
 
     	let if_block0 = /*page*/ ctx[0] === navigation.work && create_if_block_1(ctx);
-    	let if_block1 = /*page*/ ctx[0] === navigation.about && create_if_block$1(ctx);
+    	let if_block1 = /*page*/ ctx[0] === navigation.about && create_if_block$2(ctx);
     	footer = new Footer({ $$inline: true });
 
     	const block = {
@@ -2403,7 +2461,7 @@ var app = (function () {
     			t2 = space();
     			create_component(footer.$$.fragment);
     			attr_dev(main, "class", "svelte-3gwvnr");
-    			add_location(main, file$6, 33, 0, 702);
+    			add_location(main, file$6, 25, 0, 603);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -2455,7 +2513,7 @@ var app = (function () {
     						transition_in(if_block1, 1);
     					}
     				} else {
-    					if_block1 = create_if_block$1(ctx);
+    					if_block1 = create_if_block$2(ctx);
     					if_block1.c();
     					transition_in(if_block1, 1);
     					if_block1.m(main, t2);
@@ -2508,7 +2566,7 @@ var app = (function () {
     function instance$6($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots("App", slots, []);
-    	let page = navigation.about;
+    	let page = navigation.work;
     	let selectedProject;
 
     	let handleClickNavigation = selected => {
